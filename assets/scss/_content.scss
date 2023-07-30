@@ -1,0 +1,15 @@
+.content {
+    > * {
+        max-width: var(--content-width);
+    }
+
+    .full-width, div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    // Code block restriction.
+    div.highlight {
+        max-width: var(--content-width);
+    }
+}

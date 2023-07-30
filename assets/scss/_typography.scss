@@ -1,0 +1,112 @@
+// Set body size.
+body {
+    font-size: 0.875em; // 14px.
+    @media (min-width: 500px) {
+        font-size: 1em; // 16px.
+    }
+    font-weight: 400;
+    color: var(--text-color);
+    font-family: var(--rounded-font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+}
+
+h1,
+h2 {
+    font-family: var(--condensed-font-family);
+    font-weight: 700;
+    color: var(--primary-400);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--rounded-font-family);
+}
+
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+h1 {
+    line-height: 112.2%;
+    font-size: 42px;
+    @media (min-width: $min-desktop) {
+        line-height: 115%;
+        font-size: 80px;
+    }
+}
+
+h2 {
+    line-height: 120%;
+    font-size: 34px;
+    @media (min-width: $min-desktop) {
+        line-height: 115%;
+        font-size: 40px;
+    }
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 150%;
+    @media (min-width: $min-desktop) {
+        font-size: 30px;
+    }
+}
+
+h4 {
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 150%;
+    @media (min-width: $min-desktop) {
+        font-size: 16px;
+    }
+}
+
+h5 {
+    font-size: 14px;
+    @media (min-width: $min-desktop) {
+        font-size: 16px;
+    }
+}
+
+h6 {
+    font-weight: 800;
+    font-size: 12px;
+    @media (min-width: $min-desktop) {
+        font-size: 14px;
+    }
+}
+
+p + p,
+ul + p,
+ol + p {
+    margin-top: 24px;
+}
+
+a {
+    font-weight: 700;
+    color: var(--primary-600);
+    &:hover {
+        color: var(--primary-700);
+    }
+}
+
+li {
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,14 @@
+{{ with .Site.Params.github }}
+{{ if and .repo_url .show_edit_link }}
+{{ with $.File }}
+{{ $pageRelPath := replace .Path "\\" "/" }}
+{{ $langPrefix := $.Site.LanguageCode }}
+{{ $editURL := printf "%s/content/%s/%s" $.Site.Params.github.repo_url $langPrefix $pageRelPath }}
+
+<a target="_blank" rel="noopener noreferrer" href="{{ $editURL }}">
+    {{ $.Site.Params.github_edit | default "Edit this page on GitHub" }}
+</a>
+
+{{ end }}
+{{ end }}
+{{ end }}

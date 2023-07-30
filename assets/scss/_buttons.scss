@@ -1,0 +1,56 @@
+// Default button style
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 47px;
+    background-color: var(--primary-700);
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.7px;
+
+    &:hover,
+    &:active {
+        color: var(--white);
+        background-color: var(--primary-800);
+    }
+    &.secondary {
+        background-color: var(--primary-400);
+        &:hover,
+        &:active {
+            color: var(--white);
+            background-color: var(--primary-700);
+        }
+    }
+    &.tertiary {
+        background-color: var(--primary-400);
+        &:hover {
+            color: var(--white);
+            background-color: var(--primary-700);
+        }
+        &:active {
+            color: var(--black);
+            background-color: var(--white);
+        }
+    }
+}
+
+.button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media (min-width: $min-desktop) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+.button + .button {
+    margin-top: 0;
+    margin-bottom: 30px;
+    @media (min-width: $min-desktop) {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,26 @@
+{{ if gt (len .Site.Languages) 1 }} 
+<div class="language-selector dropdown">
+    <div class="dropdown-current">
+        <span class="dropdown-arrow"><span class="dropdown-selected">{{ .Site.Language.LanguageName }}</span>
+        </span>
+    </div>
+    <nav class="dropdown-nav">
+        <ul class="dropdown-group">
+            {{ $currentSiteLanguage := .Site.Language.LanguageName }}
+            {{ range .Site.Languages }}
+            {{ if ne .LanguageName $currentSiteLanguage }}
+            {{ $currentLang := . }}
+            {{ $translatedURL := "" }}
+            {{ range $.Page.AllTranslations }}
+            {{ if eq .Lang $currentLang.Lang }}
+            {{ $translatedURL = .Permalink }}
+            {{ end }}
+            {{ end }}
+            <li><a href="{{ if $translatedURL }}{{ $translatedURL }}{{ else }}/{{ $currentLang.Lang }}/{{ end }}">{{
+                    .LanguageName }}</a></li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </nav>
+</div>
+{{ end }}

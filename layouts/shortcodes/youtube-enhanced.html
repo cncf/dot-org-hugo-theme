@@ -1,0 +1,12 @@
+{{ $id := .Get "id" | default (.Get 0) }}
+{{ $playlistid := .Get "playlistid" | default "" }}
+{{ $start := .Get "start" | default 0 }}
+{{ $title := .Get "title" | default "Play Video" }}
+{{ $autoload := .Get "autoload" | default "false" }}
+
+<lite-youtube class="full-width" videoid="{{ $id }}" playlistid="{{ $playlistid }}" videotitle="{{ $title }}" videoplay="Play"
+    params="nocookie=1" 
+    {{ with $autoload }}{{ if eq . "true" }}autoload{{ end }}{{ end }}
+    posterquality="maxresdefault">
+    <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v={{ $id }}">{{ $title }} on YouTube</a>
+</lite-youtube>

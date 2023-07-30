@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ .Content }}
+<div class="accordions">
+    {{ range .Pages }}
+    <div class="faq-item accordion">
+        <div class="faq__title accordion__title">
+            <h2>{{ .Title }}</h2>
+            <svg class="cross" xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26">
+                <style>
+                    .color {
+                        fill: var(--link-color);
+                    }
+                </style>
+                <path class="color horizontal" d="M.5 10.92h26v4.16H.5z" />
+                <path class="color vertical" d="M11.42 26V0h4.16v26z" />
+            </svg>
+        </div>
+        <div class="faq__content accordion__content">
+            {{ .Content }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

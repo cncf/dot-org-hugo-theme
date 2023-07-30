@@ -1,0 +1,111 @@
+<footer class="footer">
+    <div class="container wrap">
+
+        <div class="footer__menu-cta-wrapper">
+
+            <div class="footer__menu">
+                {{/* Store menu items without children in a Scratch */}}
+                {{ $.Scratch.Set "noChildrenItems" slice }}
+
+                {{ with .Site.Menus.main }}
+
+                {{/* First, loop through to filter out items with no children and store them */}}
+                {{ range . }}
+                {{ if not .HasChildren }}
+                {{ $noChildren := $.Scratch.Get "noChildrenItems" }}
+                {{ $.Scratch.Set "noChildrenItems" ($noChildren | append .) }}
+                {{ end }}
+                {{ end }}
+
+                {{/* Render items with children first, each wrapped in its own column */}}
+                {{ range . }}
+                {{ if .HasChildren }}
+                <div class="column">
+                    <p class="top-menu-item">{{ .Name }}</p>
+                    <ul>
+                        {{ range .Children }}
+                        <li class="menu-item">
+                            <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                    </li>
+                </div>
+                {{ end }}
+                {{ end }}
+                {{/* Render all items without children inside a single column div */}}
+                <div class="column no-children-links">
+                    <ul>
+                        <p class="top-menu-item">&nbsp;</p>
+                        {{ range $.Scratch.Get "noChildrenItems" }}
+                        <li class="menu-item">
+                            <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                {{ end }}
+            </div>
+
+            {{ with .Site.Params.footer_cta }}
+            {{ if and .text .link }}
+            <div class="footer__cta">
+                <a href="{{ .link | absLangURL }}" class="button tertiary">{{ .text }}</a>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+
+        <div class="footer__logo-social-wrapper">
+            {{ with .Site.Params.logo_on_black }}
+            <a class="logo-link" href="{{ "/" | absLangURL }}">
+                <img class="logo" width="150" height="40" src="{{ . | absURL }}" alt="{{ $.Site.Title }}"></a>
+            {{ end }}
+
+            {{- partial "footer/social-links.html" . -}}
+        </div>
+
+        <hr class="footer-hr">
+
+        <div class="copyright">
+            <p>{{ .Site.Params.copyright | markdownify }}</p>
+
+            <div class="copyright__accessibility-git-wrapper">
+                {{ if .Site.Params.accessibility.help_url }}
+                <a href="{{ .Site.Params.accessibility.help_url }}">{{ .Site.Params.accessibility.help_text | default
+                    "Accessibility Statement" }}</a>
+                {{ end }}
+
+                {{- partial "footer/github.html" . -}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+{{/* Theme: Hover Intent */}}
+{{ $js := resources.Get "js/hoverintent.min.js" }}
+<script defer src="{{ $js.Permalink }}"></script>
+
+{{/* Theme: FAQ */}}
+{{ if and (eq .Type "faq") (eq .Kind "section") }}
+{{ $js := resources.Get "js/accordion.js" }}
+<script defer src="{{ $js.Permalink }}"></script>
+{{ end }}
+
+{{/* Theme: Scripts */}}
+{{ $js := resources.Get "js/scripts.js" }}
+{{ if eq (getenv "HUGO_ENV") "production" }}
+{{ $js = $js | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ else }}
+<script defer src="{{ $js.Permalink }}"></script>
+{{ end }}
+
+{{/* Shortcode: YouTube Enhanced */}}
+{{ if .HasShortcode "youtube-enhanced" }}
+{{ $js := resources.Get "js/youtube-lite.js" | resources.Minify }}
+<script type="module" defer src="{{ $js.Permalink }}"></script>
+{{ end }}
+
+{{/* User: Custom JS */}}
+{{- partial "footer/custom-js.html" . }}

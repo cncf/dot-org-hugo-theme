@@ -1,0 +1,26 @@
+iframe {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-style: inset;
+    border-right-style: inset;
+    border-bottom-style: inset;
+    border-left-style: inset;
+}
+
+lite-youtube {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media (min-width: $min-desktop) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+lite-youtube + lite-youtube {
+    margin-top: 0;
+    @media (min-width: $min-desktop) {
+        margin-top: 0;
+    }
+}

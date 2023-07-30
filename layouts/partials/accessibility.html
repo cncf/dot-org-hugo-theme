@@ -1,0 +1,7 @@
+
+<a class="skip-link" href="#content">{{ .Site.Params.accessibility.skip_text | default "Skip to content" }}</a>
+
+{{/* Only include Accessibility Statement / Help if set */}}
+{{ if .Site.Params.accessibility.help_url }}
+<a class="skip-link" href="{{ .Site.Params.accessibility.help_url }}">{{ .Site.Params.accessibility.help_text | default "Accessibility help" }}</a>
+{{ end }}

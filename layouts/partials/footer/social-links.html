@@ -1,0 +1,21 @@
+{{ $socialLinks := .Site.Params.social_links }}
+{{ with $socialLinks }}
+    {{ $validLinks := slice }}
+    {{ range $key, $value := . }}
+        {{ if $value }}
+            {{ $validLinks = $validLinks | append (dict "key" $key "value" $value) }}
+        {{ end }}
+    {{ end }}
+
+    {{ if gt (len $validLinks) 0 }}
+    <ul class="social-links">
+        {{ range $validLinks }}
+        <li>
+            <a href="{{ .value }}" target="_blank" rel="noopener noreferrer">
+                <img width="31" height="31" src="{{ printf "/img/social-icons/%s.svg" .key }}" alt="{{ .key }} icon">
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+{{ end }}

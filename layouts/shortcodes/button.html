@@ -1,0 +1,1 @@
+<a href="{{ .Get "link" }}" class="{{ with .Get "style" }}{{ if eq . "secondary" }}button secondary{{ else if eq . "tertiary" }}button tertiary{{ else }}button{{ end }}{{ else }}button{{ end }}">{{ .Get "text" }}</a>

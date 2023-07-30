@@ -1,0 +1,10 @@
+{{- $source := "scss/styles.scss" }}
+{{- $target := "css/styles.css" }}
+{{ $options := (dict "targetPath" $target) }}
+{{ if eq hugo.Environment "production" }}
+    {{ $options = merge $options (dict "outputStyle" "compressed" "enableSourceMap" false) }}
+{{ else }}
+    {{ $options = merge $options (dict "outputStyle" "nested" "enableSourceMap" true) }}
+{{ end }}
+{{ $style := resources.Get $source | resources.ToCSS $options | resources.PostCSS (dict "config" "postcss.config.js") | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="all">

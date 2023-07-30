@@ -1,0 +1,60 @@
+<header class="header">
+    <div class="container wrap">
+
+        {{ with .Site.Params.logo_on_white }}
+        <a class="logo-link" href="{{ "/" | absLangURL }}">
+            <img class="logo" width="150" height="40" src="{{ . | absURL }}" alt="{{ $.Site.Title }}">
+        </a>
+        {{ else }}
+        <a class="site-title-link" href="{{ "/" | absLangURL }}">
+            <span class="site-title">{{ $.Site.Title }}</span>
+        </a>
+        {{ end }}
+        
+        {{ with .Site.Menus.main }}
+        <nav class="main-menu">
+            <ul class="main-menu__wrapper">
+                {{ range . }}
+                <li class="top-menu-item{{ if .HasChildren }} menu-item-has-children{{ end }}">
+                    <a href="{{ if .HasChildren }}#{{ else }}{{ .URL | relLangURL }}{{ end }}" class="menu-link">{{
+                        .Name }}</a>
+                    {{ if .HasChildren }}
+                    <div class="sub-menu">
+                        <ul class="sub-menu__nav">
+                            {{ range .Children }}
+                            <li class="menu-item">
+                                <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}
+                                    {{ if .Post }}
+                                    <span class="menu-item__description">{{ .Post }}</span>
+                                    {{ end }}
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    {{ end }}
+                </li>
+                {{ end }}
+            </ul>
+
+            <div class="main-menu__cta-language-wrapper">
+                {{ with $.Site.Params.main_cta }}
+                {{ if and .text .link }}
+                <a href="{{ .link | absLangURL }}" class="button main-menu-cta">{{ .text }}</a>
+                {{ end }}
+                {{ end }}
+
+                {{ partial "language-selector.html" $ }}
+            </div>
+
+        </nav>
+        <button class="hamburger" type="button" aria-label="Toggle Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        {{ else }}
+        <p>Create pages or add <pre>.Site.Menus.main</pre> to config to activate menu.</p>
+        {{ end }}
+    </div>
+</header>

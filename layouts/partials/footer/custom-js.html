@@ -1,0 +1,3 @@
+{{ range .Site.Params.custom_js }}
+    <script defer src="{{ . | absURL }}"></script>
+{{ end }}

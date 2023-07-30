@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body>
+    <body class="{{ urlize .Type }}">
+        {{- partial "accessibility.html" . -}}
         {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
+        
+        <section id="content" class="container wrap">
+            <header>
+                <h1>{{ .Title }}</h1>
+            </header>
+            <article class="content">
+            {{- block "main" . }}{{ .Content }}{{- end }}
+            </article>
+        </section>
         {{- partial "footer.html" . -}}
     </body>
 </html>

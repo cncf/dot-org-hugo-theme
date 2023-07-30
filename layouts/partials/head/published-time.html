@@ -1,0 +1,5 @@
+{{ if .IsPage }}
+<meta property="article:published_time" content="{{ (cond .PublishDate.IsZero .Date .PublishDate).Format "2006-01-02"}}" />
+{{ if not .Lastmod.IsZero }}
+<meta property="article:modified_time" content="{{ .Lastmod.Format " 2006-01-02"}}" />{{ end }}
+{{ end }}

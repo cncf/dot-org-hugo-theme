@@ -1,0 +1,16 @@
+[build]
+publish = "exampleSite/public"
+command = "cd exampleSite && hugo --themesDir=../.. --baseURL ${DEPLOY_PRIME_URL}"
+
+[build.environment]
+NODE_VERSION = "18.14.0"
+HUGO_VERSION = "0.115.4"
+HUGO_THEME = "repo"
+
+[context.deploy-preview]
+command = "cd exampleSite && hugo --themesDir=../.. --buildFuture --buildDrafts --baseURL $DEPLOY_PRIME_URL"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+      Access-Control-Allow-Origin = "*"
