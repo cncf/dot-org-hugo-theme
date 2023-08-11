@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Language.Lang }}">
     {{- partial "head.html" . -}}
     <body class="{{ urlize .Type }}">
         {{- partial "accessibility.html" . -}}
@@ -9,9 +9,17 @@
             <header>
                 <h1>{{ .Title }}</h1>
             </header>
+            {{ if or (eq .Kind "section") (eq .Kind "home") }}
+            <div class="content">
+            {{ else }}
             <article class="content">
+            {{ end }}
             {{- block "main" . }}{{ .Content }}{{- end }}
+            {{ if or (eq .Kind "section") (eq .Kind "home") }}
+            </div>
+            {{ else }}
             </article>
+            {{ end }}
         </section>
         {{- partial "footer.html" . -}}
     </body>
