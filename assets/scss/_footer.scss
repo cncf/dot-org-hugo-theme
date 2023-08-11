@@ -62,11 +62,13 @@
         }
         a {
             width: 100%;
+            font-size: 18px;
             @media (min-width: $min-desktop) {
                 width: max-content;
                 margin: 0;
                 margin-left: 40px;
             }
+
         }
     }
 

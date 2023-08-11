@@ -4,11 +4,13 @@ description: A demo page for the various markup elements in the Dot Org theme.
 images: ["https://via.placeholder.com/250x200/d9d9d9/000000"]
 ---
 
-This is a demo page, designed to show you the various elements of the theme and how they sit together. The content doesn't mean anything.
+This is a demo page, designed to show you the various elements of the theme and how they sit together.
 
 It has a custom social image, which can be set in the frontmatter.
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate get, arcu. In enim justo, rhoncus ut imperdiet a.
+
+First here's how the Heading markup displays:
 
 # H1 Heading
 ## H2 Heading
@@ -24,30 +26,25 @@ ___
 
 # Example Content
 
-The introduction summarizes the purpose and function of the project, and should be concise (a brief paragraph or two). This introduction may be the same as the first paragraph on the project page.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.
 
-## Table of contents (optional)
+## Table of contents (Shortcode)
 
-- Requirements
-- Recommended modules
-- Installation
-- Configuration
-- Troubleshooting
-- FAQ
-- Maintainers
+{{< toc >}}
 
+## Example Paragraph
 
-## [Requirements](http://google.com)
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.
+
+## [Header as a link](https://www.cncf.io)
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo [link text](http://google.com) ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate get, arcu. In enim justo, rhoncus ut imperdiet a.
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.
 
+## Example Paragraph with Buttons
+
 Donec pede justo, fringilla vel, aliquet nec, vulputate get, arcu. In enim justo, rhoncus ut imperdiet a. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
-
-## Recommended modules (optional)
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.
 
 {{< button link="/path/to/page" text="Default Button" >}}
 
@@ -61,28 +58,25 @@ Donec pede justo, fringilla vel, aliquet nec, vulputate get, arcu. In enim justo
 
 Donec pede justo, fringilla vel, aliquet nec, vulputate get, arcu. In enim justo, rhoncus ut imperdiet a. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
 
-{{< vimeo id="146022717" title="My vimeo video" >}}
-
 Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
 
-## YouTube Standard Hugo Shortcode
+## YouTube standard (Hugo Shortcode) (not recommended)
 
 {{< youtube QFSBC7G0URY >}}
 
-Pulls from youtube-nocookie (based on config privacy settings) but still slows the page load down.
+Pulls from youtube-nocookie (based on config privacy settings) but still slows the page load down. Not recommended.
 
-## YouTube Enhanced Shortcodes includes Playlists
-
-Install as you would normally install a contributed Drupal module. For further information, see [Installing Drupal Modules](https://www.drupal.org/docs/extending-drupal/installing-drupal-modules).
+## YouTube Enhanced (with Playlists) (Shortcode)
 
 {{< youtube-enhanced id="9oVr7rrNZVI" >}}
 
 {{< youtube-enhanced id="xPSXtoJNGLs" title="Play Videos from Kubecon" playlistid="PLj6h78yzYM2PyrvCoOii4rAopBswfz1p7" >}}
 
-## Configuration (required)
+## Vimeo standard (Hugo Shortcode) (not recommended)
 
-1. Enable the module at Administration > Extend.
-1. Profit.
+The standard vimeo shortcode loads lots of tracking data and is slow, recommended to avoid this if possible.
+
+{{< vimeo id="146022717" title="My vimeo video" >}}
 
 ## Emphasis
 
@@ -96,14 +90,11 @@ _This is italic text_
 
 ~~Strikethrough~~
 
-
 ## Blockquotes
-
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
 > > > ...or with spaces between arrows.
-
 
 ## Lists
 
@@ -137,7 +128,7 @@ Start numbering with offset:
 
 This is a paragraph but the words `Inline code` are actually inline code. Whoddathunkit.
 
-And then we have some indented code:
+And then we have some indented code with a comment:
 
     // A comment.
     line 1 of code
@@ -145,7 +136,7 @@ And then we have some indented code:
     line 3 of code
 
 
-And then we have some block code. They should all look prettys similar:
+And then we have some block code. They should all look pretty similar:
 
 ```
 Sample text here...
@@ -189,33 +180,30 @@ console.log(foo(5));
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-
 ## Links
 
 [link text](http://dev.nodeca.com)
 
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+Autoconverted link https://github.com/nodeca/pica 
 
 ## Images
 
-![Minion](https://octodex.github.com/images/minion.png)
+Images expand to fit the content width.
+
+![This is alt text, please remember to set it](https://octodex.github.com/images/minion.png)
 ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+Coming soon: Advanced image handling, lazy loading, etc.
 
 ## Gist
 
 {{< gist thinhong 218cb565018eab7db50aa7cfd53c16c6 >}}
 
 ## Tweets
+
+Embedding tweets like this loads lots of tracking scripts and is not recommended. Use a screenshot of the tweet and link the image to the real tweet. 
 
 {{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
 
@@ -224,8 +212,6 @@ With a reference later in the document defining the URL location:
 Footnote 1 link[^first].
 
 Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
 
 Duplicated footnote reference[^second].
 

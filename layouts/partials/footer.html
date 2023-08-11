@@ -29,7 +29,6 @@
                         </li>
                         {{ end }}
                     </ul>
-                    </li>
                 </div>
                 {{ end }}
                 {{ end }}
@@ -104,7 +103,7 @@
 {{/* Shortcode: YouTube Enhanced */}}
 {{ if .HasShortcode "youtube-enhanced" }}
 {{ $js := resources.Get "js/youtube-lite.js" | resources.Minify }}
-<script type="module" defer src="{{ $js.Permalink }}"></script>
+<script type="module" src="{{ $js.Permalink }}"></script>
 {{ end }}
 
 {{/* User: Custom JS */}}
