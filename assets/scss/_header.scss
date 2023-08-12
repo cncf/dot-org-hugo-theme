@@ -160,6 +160,9 @@
         width: 100%;
         text-align: center;
         margin-bottom: 0;
+        @media (max-width: $mobile-max) {
+            font-size: 18px;
+        }
         @media (min-width: $min-desktop) {
             width: max-content;
             margin-top: 0; // reset.
