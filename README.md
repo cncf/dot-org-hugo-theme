@@ -6,32 +6,65 @@ This Hugo theme is ideal for powering the website of a small organization. It wa
 - **Performant** - HTML/CSS/JS written from scratch to be as fast as possible without relying on frameworks or libraries
 - **Multilingual** - ready to support multiple languages of content
 
+# Installation
 
-## Using this theme
+There are two main methods of installing this theme to an existing Hugo site:
 
-There are two methods of installing this theme:
+## 1) Download it
 
-### 1) Download it
-Download files from this repository and add to your Hugo site.
-Then open your hugo.toml file and add the following tag:
+Inside the folder of your Hugo site, run:
+
+```
+$ git clone https://github.com/cncf/dot-org-hugo-theme themes/dot-org-hugo-theme
+```
+
+This downloads the repo from GitHub and puts the contents in your themes folder.
+
+To update your theme to future versions:
+
+```
+$ cd themes/dot-org-hugo-theme
+$ git pull
+```
+
+## 2) Use git submodule
+
+Inside the folder of your Hugo site run:
+
+```
+$ git submodule add https://github.com/cncf/dot-org-hugo-theme.git themes/dot-org-hugo-theme
+```
+
+This downloads the repo from GitHub and puts the contents in your themes folder as a git sub-module.
+
+To update your theme to future versions:
+
+```
+$ git submodule update --remote --merge
+```
+
+## Installing dependencies 
+
+Copy (at least) the following files from the themes to the root folder of your site.
+
+- themes/dot-org-hugo-theme/exampleSite/package.json
+- themes/dot-org-hugo-theme/exampleSite/postcss.config.js
+
+After that, run this command (requires [node.js](https://nodejs.org/)).
+
+```
+$ npm install
+```
+
+You should also copy across the config folder or its contents to your root.
+
+TODO
+
+Add the following tag:
 
 ```theme: dot-org-hugo-theme```
 
-### 2) Use git submodule
 
-Run these commands to create a Hugo site with the dot-org-hugo-theme theme
-
-```hugo new site your-site-name
-cd your-site-name
-git init
-git submodule add https://github.com/cncf/dot-org-hugo-theme.git themes/dot-org-hugo-theme
-echo "theme = 'dot-org-hugo-theme'" >> hugo.toml
-hugo server
-```
-
-If you want to update the theme with the latest changes just run the command
-
-```git submodule update --remote```
 
 ## Config files
 
@@ -48,7 +81,7 @@ If you want to create improvements on this theme for everyone, follow these inst
 
 ```
 git clone https://github.com/cncf/dot-org-hugo-theme.git
-cd dot-org-hugo-theme
+cd dot-org-hugo-theme/exampleSite
 npm install
 npm run start
 ```
