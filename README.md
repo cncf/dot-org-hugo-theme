@@ -73,7 +73,17 @@ After that, run this command to install dependencies (requires [node.js](https:/
 npm install
 ```
 
-Launch the site.... 
+You can then run a local server using:
+
+```bash
+npm run start
+```
+
+or you can build your site using:
+
+```bash
+npm run build
+```
 
 
 ## Config files
@@ -86,12 +96,11 @@ TODO
 
 ## Setting up a local instance for improving this theme
 
-If you want to create improvements on this theme for everyone, follow these instructions. Note you must have [npm](https://www.npmjs.com/) and [Hugo](https://gohugo.io/) installed.
-
+If you want to create improvements for this theme for everyone, follow these instructions to launch the exampleSite. 
 
 ```bash
 git clone https://github.com/cncf/dot-org-hugo-theme.git
 cd dot-org-hugo-theme/exampleSite
 npm install
-npm run start
+npm run dev
 ```
