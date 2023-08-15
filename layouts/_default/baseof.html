@@ -6,7 +6,7 @@
         {{- partial "header.html" . -}}
         
         <section id="content" class="container wrap">
-            {{ if not .Params.hideHeader }}
+            {{ if not .Params.showHeader }}
                 <header>
                     <h1>{{ .Title }}</h1>
                 </header>
