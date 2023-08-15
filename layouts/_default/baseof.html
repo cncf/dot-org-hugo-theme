@@ -8,7 +8,7 @@
         <section id="content" class="container wrap">
             {{ if ne .Params.showHeader false }}
                 <header>
-                    <h1>{{ .Title }}</h1>
+                    <h1 class="title">{{ .Title }}</h1>
                 </header>
             {{ end }}
             {{ if or (eq .Kind "section") (eq .Kind "home") }}

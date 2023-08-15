@@ -68,9 +68,9 @@ Pulls from youtube-nocookie (based on config privacy settings) but still slows t
 
 ## YouTube Enhanced (with Playlists) (Shortcode)
 
-{{< youtube-enhanced id="9oVr7rrNZVI" >}}
+{{< youtube_enhanced id="9oVr7rrNZVI" >}}
 
-{{< youtube-enhanced id="xPSXtoJNGLs" title="Play Videos from Kubecon" playlistid="PLj6h78yzYM2PyrvCoOii4rAopBswfz1p7" >}}
+{{< youtube_enhanced id="xPSXtoJNGLs" title="Play Videos from Kubecon" playlistid="PLj6h78yzYM2PyrvCoOii4rAopBswfz1p7" >}}
 
 ## Vimeo standard (Hugo Shortcode) (not recommended)
 
@@ -91,6 +91,12 @@ _This is italic text_
 ~~Strikethrough~~
 
 ## Blockquotes
+
+Some text and then a quote:
+
+> Blockquotes can be cool. Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo.
+
+And also they can:
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
@@ -156,29 +162,23 @@ console.log(foo(5));
 
 ### Short table:
 
-| Project | Date       | Status   |
-|---------|------------|----------|
-| Alpha   | 2023-07-01 | Active   |
-| Beta    | 2023-07-15 | Completed|
-| Gamma   | 2023-08-01 | On Hold  |
-| Delta   | 2023-08-15 | Active   |
-| Epsilon | 2023-09-01 | Pending  |
+| Project | Date       |
+|---------|------------|
+| Alpha   | 2023-07-01 |
+| Beta    | 2023-07-15 |
+| Gamma   | 2023-08-01 |
+| Delta   | 2023-08-15 |
+| Epsilon | 2023-09-01 |
 
-### Longer content table:
+### Longer content table (using Shortcode):
 
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-### Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+{{< responsive_table >}}
+| Option | Option | Description |
+| ------ | ------ | ----------- |
+| one    | data   | path to data files to supply the data that will be passed into templates. |
+| two    | engine | engine to be used for processing templates. Handlebars is the default. |
+| three  | ext    | extension to be used for dest files. |
+{{< /responsive_table >}}
 
 ## Links
 

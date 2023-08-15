@@ -101,7 +101,7 @@
 {{ end }}
 
 {{/* Shortcode: YouTube Enhanced */}}
-{{ if .HasShortcode "youtube-enhanced" }}
+{{ if .HasShortcode "youtube_enhanced" }}
 {{ $js := resources.Get "js/youtube-lite.js" | resources.Minify }}
 <script type="module" src="{{ $js.Permalink }}"></script>
 {{ end }}

@@ -17,7 +17,7 @@ en:
       text: "Join us"
       link: "/example-page/"
     ### copyright (markdown can be used) ###
-    copyright: "Copyright &copy; {{< current-year >}} Company Name. All Rights Reserved."
+    copyright: "Copyright &copy; {{< current_year >}} Company Name. All Rights Reserved."
     github_edit: "Edit this page on GitHub"
   ### example menu showing children ###
   menu:
