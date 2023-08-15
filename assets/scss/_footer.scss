@@ -62,13 +62,12 @@
         }
         a {
             width: 100%;
-            font-size: 18px;
+            font-size: 20px;
             @media (min-width: $min-desktop) {
                 width: max-content;
                 margin: 0;
                 margin-left: 40px;
             }
-
         }
     }
 
