@@ -14,56 +14,66 @@ There are two main methods of installing this theme to an existing Hugo site:
 
 Inside the folder of your Hugo site, run:
 
-```
-$ git clone https://github.com/cncf/dot-org-hugo-theme themes/dot-org-hugo-theme
+```bash
+git clone https://github.com/cncf/dot-org-hugo-theme themes/dot-org-hugo-theme
 ```
 
 This downloads the repo from GitHub and puts the contents in your themes folder.
 
 To update your theme to future versions:
 
-```
-$ cd themes/dot-org-hugo-theme
-$ git pull
+```bash
+cd themes/dot-org-hugo-theme
+git pull
 ```
 
 ## 2) Use git submodule
 
 Inside the folder of your Hugo site run:
 
-```
-$ git submodule add https://github.com/cncf/dot-org-hugo-theme.git themes/dot-org-hugo-theme
+```bash
+git submodule add https://github.com/cncf/dot-org-hugo-theme.git themes/dot-org-hugo-theme
 ```
 
 This downloads the repo from GitHub and puts the contents in your themes folder as a git sub-module.
 
 To update your theme to future versions:
 
-```
-$ git submodule update --remote --merge
+```bash
+git submodule update --remote --merge
 ```
 
 ## Installing dependencies 
 
-Copy (at least) the following files from the themes to the root folder of your site.
+Copy (at least) the following files from the themes exampleSite to the root folder of your project.
 
 - themes/dot-org-hugo-theme/exampleSite/package.json
 - themes/dot-org-hugo-theme/exampleSite/postcss.config.js
 
-After that, run this command (requires [node.js](https://nodejs.org/)).
+For ease you can run from the command line:
 
+```bash
+cp themes/dot-org-hugo-theme/exampleSite/package.json .
+cp themes/dot-org-hugo-theme/exampleSite/postcss.config.js .
 ```
-$ npm install
+
+We recommend a config directory approach to replace your config.toml or hugo.toml file. To get up and running quickly with the default config, you can copy the following folder to the root of your site:
+
+- themes/dot-org-hugo-theme/exampleSite/config/
+
+From the command line in your project root, you can run the following to copy the themes exampleSite config to your project:
+
+```bash
+cp -r themes/dot-org-hugo-theme/exampleSite/config ./config
 ```
 
-You should also copy across the config folder or its contents to your root.
+After that, run this command to install dependencies (requires [node.js](https://nodejs.org/)).
 
-TODO
+```bash
+npm install
+```
 
-Add the following tag:
-
-```theme: dot-org-hugo-theme```
-
+Launch the site.... 
 
 
 ## Config files
@@ -79,7 +89,7 @@ TODO
 If you want to create improvements on this theme for everyone, follow these instructions. Note you must have [npm](https://www.npmjs.com/) and [Hugo](https://gohugo.io/) installed.
 
 
-```
+```bash
 git clone https://github.com/cncf/dot-org-hugo-theme.git
 cd dot-org-hugo-theme/exampleSite
 npm install
