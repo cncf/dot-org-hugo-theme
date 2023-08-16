@@ -42,6 +42,6 @@
 }
 
 // Do not show the outline on the skip link target.
-#maincontent[tabindex='-1']:focus {
+#maincontent[tabindex="-1"]:focus {
 	outline: 0;
 }

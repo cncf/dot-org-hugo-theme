@@ -68,8 +68,8 @@
     padding-left: 12px;
     padding-right: 12px;
     @media (min-width: 372px) {
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
     }
     @media (min-width: $min-desktop) {
         display: flex;
@@ -107,8 +107,6 @@
         }
         @media (min-width: $min-desktop) {
             display: flex;
-            // margin-right: auto;
-            // width: 100%;
         }
         // All Links.
         a {

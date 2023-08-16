@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // margins
 }
 
 .accordion {
@@ -13,7 +12,6 @@
 
     &__title {
         position: relative;
-        // padding: 20px;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
@@ -42,7 +40,6 @@
     }
 
     &__content {
-        // padding: 0 20px;
         max-height: 0;
         overflow: hidden;
         will-change: max-height;
