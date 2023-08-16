@@ -3,7 +3,9 @@
         max-width: var(--content-width);
     }
 
-    .full-width, div {
+    .full-width,
+    div,
+    iframe {
         width: 100%;
         max-width: 100%;
     }
