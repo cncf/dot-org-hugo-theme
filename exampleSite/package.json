@@ -25,5 +25,9 @@
         "netlify-cli": "^16.0.2",
         "postcss": "^8.4.27",
         "postcss-cli": "^10.1.0"
+    },
+    "devDependencies": {
+        "prettier": "^3.0.2",
+        "prettier-plugin-go-template": "^0.0.15"
     }
 }

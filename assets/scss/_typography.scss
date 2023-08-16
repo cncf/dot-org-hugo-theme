@@ -21,35 +21,11 @@ body {
 }
 
 h1,
-h2,
-h4,
-h5,
-h6 {
-    text-transform: uppercase;
-}
-
-h1,
-h2 {
+.h1 {
     font-family: var(--condensed-font-family);
     font-weight: 700;
     color: var(--primary-400);
-}
-
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--rounded-font-family);
-}
-
-h4,
-h5,
-h6 {
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-h1 {
     line-height: 112.2%;
     font-size: 42px;
     @media (min-width: $min-desktop) {
@@ -58,7 +34,12 @@ h1 {
     }
 }
 
-h2 {
+h2,
+.h2 {
+    font-family: var(--condensed-font-family);
+    font-weight: 700;
+    color: var(--primary-400);
+    text-transform: uppercase;
     line-height: 120%;
     font-size: 34px;
     @media (min-width: $min-desktop) {
@@ -67,7 +48,9 @@ h2 {
     }
 }
 
-h3 {
+h3,
+.h3 {
+    font-family: var(--rounded-font-family);
     font-size: 20px;
     line-height: 150%;
     @media (min-width: $min-desktop) {
@@ -75,25 +58,37 @@ h3 {
     }
 }
 
-h4 {
+h4,
+.h4 {
+    font-family: var(--rounded-font-family);
     font-weight: 900;
     font-size: 14px;
     line-height: 150%;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
     @media (min-width: $min-desktop) {
         font-size: 16px;
     }
 }
 
-h5 {
+h5,
+.h5 {
+    font-family: var(--rounded-font-family);
     font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
     @media (min-width: $min-desktop) {
         font-size: 16px;
     }
 }
 
-h6 {
+h6,
+.h6 {
+    font-family: var(--rounded-font-family);
+    text-transform: uppercase;
     font-weight: 800;
     font-size: 12px;
+    letter-spacing: 0.8px;
     @media (min-width: $min-desktop) {
         font-size: 14px;
     }
@@ -147,7 +142,6 @@ blockquote {
 
 table {
     width: 100%;
-    // border: 0;
     border-collapse: separate;
     border-spacing: 0;
     border-top-left-radius: 12px;
