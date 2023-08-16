@@ -1,6 +1,9 @@
 {
   "recommendations": [
     "budparr.language-hugo-vscode",
-    "tamasfe.even-better-toml"
+    "tamasfe.even-better-toml",
+    "kaellarkin.hugo-shortcode-syntax",
+    "esbenp.prettier-vscode",
+    "sibiraj-s.vscode-scss-formatter"
   ]
 }

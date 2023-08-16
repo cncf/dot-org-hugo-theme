@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{- $date := .Date.Format "Monday, January 1, 2006" }}
+{{- $allAuthors := .Site.Data.authors }}
+{{- $author := .Params.author }}
+
+{{- partial "blog/byline.html" . }}
+{{ .Content }}
+
+{{- partial "blog/back.html" . }}
+{{ end }}

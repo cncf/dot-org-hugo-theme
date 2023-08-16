@@ -1,0 +1,26 @@
+{{- $date := .Date.Format "January 2, 2006" }}
+{{- $allAuthors := .Site.Data.authors }}
+{{- $authorKey := .Params.author }}
+{{- $authorData := index $allAuthors $authorKey }}
+
+<div class="blog-item__byline">
+  <p>
+    {{ if $date }}
+      <span class="blog-item__date">{{ $date }}</span>
+    {{ end }}
+    {{ if $authorData }}
+      <span class="blog-item__author"
+        >{{ i18n "by" | default "by" }}
+        {{ if $authorData.twitter }}
+          <a
+            href="https://www.twitter.com/{{ $authorData.twitter }}"
+            title="Visit {{ $authorData.name }} on Twitter"
+          >{{ $authorData.name }}</a>
+        {{ else }}
+          {{ $authorData.name }}
+        {{ end }}
+        {{ if $authorData.company }}({{ $authorData.company }}){{ end }}
+      </span>
+    {{ end }}
+  </p>
+</div>

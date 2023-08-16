@@ -275,15 +275,6 @@
             height: 0;
             // style.
             min-width: 330px;
-            &:after {
-                content: "";
-                top: 100%;
-                position: absolute;
-                width: 100%;
-                height: 10px;
-                z-index: 3;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-            }
         }
         &__nav {
             margin-left: 0; // reset.

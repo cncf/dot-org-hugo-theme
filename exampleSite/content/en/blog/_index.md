@@ -3,4 +3,4 @@ title: "Blog"
 description: ""
 ---
 
-Our blog.
+Welcome to our blog.

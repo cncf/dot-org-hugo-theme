@@ -53,6 +53,7 @@ h3,
     font-family: var(--rounded-font-family);
     font-size: 20px;
     line-height: 150%;
+    text-transform: none;
     @media (min-width: $min-desktop) {
         font-size: 30px;
     }
