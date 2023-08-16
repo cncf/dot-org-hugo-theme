@@ -1,0 +1,14 @@
+{{ $spacerValue := default "50" (.Get 0) }}
+<div class="spacer-{{ $spacerValue }}" aria-hidden="true">
+    <style>
+        .spacer-{{ $spacerValue }} {
+            height: {{ $spacerValue }}px;
+        }
+
+        @media (max-width: 1000px) {
+            .spacer-{{ $spacerValue }} {
+                height: calc({{ $spacerValue }}px / 2);
+            }
+        }
+    </style>
+</div>

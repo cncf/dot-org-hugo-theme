@@ -1,1 +1,7 @@
-<iframe src="{{ .Get "src" }}" width="{{ with .Get "width" }}{{ . }}{{ else }}100%{{ end }}" height="{{ with .Get "height" }}{{ . }}{{ else }}600px{{ end }}" frameborder="0" allowfullscreen></iframe>
+<iframe 
+src="{{ .Get "src" }}" 
+width="{{ with .Get "width" }}{{ . }}{{ else }}100%{{ end }}" 
+height="{{ with .Get "height" }}{{ . }}{{ else }}600px{{ end }}" 
+frameborder="0" 
+allowfullscreen>
+</iframe>
