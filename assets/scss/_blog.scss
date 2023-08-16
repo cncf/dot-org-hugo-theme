@@ -12,8 +12,6 @@
         margin-block-end: 0;
     }
     &__byline {
-        // display: flex;
-        // align-items: center;
         margin-block-start: 5px;
         margin-block-end: 10px;
         p {
@@ -36,11 +34,6 @@
             fill: var(--primary-400);
             color: var(--primary-400);
         }
-    }
-
-    &__date {
-    }
-    &__author {
     }
     &__summary {
         margin-block-start: 0;
