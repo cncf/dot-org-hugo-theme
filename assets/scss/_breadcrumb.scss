@@ -1,0 +1,33 @@
+.breadcrumb {
+    margin-block-start: 70px;
+    margin-block-end: 0;
+    @media (min-width: $desktop-width) {
+        margin-block-start: 100px;
+        margin-block-end: 0;
+    }
+    font-family: Nunito;
+    font-size: 12px;
+    @media (min-width: 600px) {
+        font-size: 14px;
+    }
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    a {
+        text-decoration: none;
+        color: var(--gray-800);
+    }
+}
+
+.breadcrumb + .title,
+.breadcrumb + h1,
+.breadcrumb + .h1 {
+    margin-block-start: 30px;
+    margin-block-end: 50px;
+    @media (min-width: $desktop-width) {
+        margin-block-start: 60px;
+        margin-block-end: 80px;
+    }
+}

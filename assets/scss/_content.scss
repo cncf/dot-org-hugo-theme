@@ -18,4 +18,13 @@
     div.highlight {
         max-width: var(--content-width);
     }
+
+    // Stops links pushing out container.
+    a {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+        hyphens: auto;
+    }
 }
