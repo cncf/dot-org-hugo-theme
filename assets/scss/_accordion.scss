@@ -60,6 +60,7 @@
 
     .cross {
         flex-grow: 0;
+        flex-shrink: 0;
         .vertical {
             opacity: 1;
             transition: opacity 0.3s ease;
