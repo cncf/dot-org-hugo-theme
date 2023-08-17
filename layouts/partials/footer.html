@@ -67,7 +67,7 @@
         <hr class="footer-hr">
 
         <div class="copyright">
-            <p>{{ .Site.Params.copyright | markdownify }}</p>
+            <p>{{ .Site.Params.copyright | default "Copyright &copy; {{< current_year >}} All Rights Reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)." | markdownify }}</p>
 
             <div class="copyright__accessibility-git-wrapper">
                 {{ if .Site.Params.accessibility.help_url }}

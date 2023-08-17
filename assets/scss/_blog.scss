@@ -10,6 +10,9 @@
     &__title {
         margin-block-start: 0;
         margin-block-end: 0;
+        a {
+            text-decoration: none;
+        }
     }
     &__byline {
         margin-block-start: 5px;
@@ -33,6 +36,11 @@
         svg {
             fill: var(--primary-400);
             color: var(--primary-400);
+        }
+    }
+    &__author {
+        a {
+            text-decoration: none;
         }
     }
     &__summary {

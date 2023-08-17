@@ -1,3 +1,4 @@
+{{ $siteTitle := .Site.Title }}
 {{ $socialLinks := .Site.Params.social_links }}
 {{ with $socialLinks }}
     {{ $validLinks := slice }}
@@ -11,7 +12,7 @@
     <ul class="social-links">
         {{ range $validLinks }}
         <li>
-            <a href="{{ .value }}" target="_blank" rel="noopener noreferrer">
+            <a href="{{ .value }}" title="{{ i18n "social_link_title" (dict "SiteTitle" $siteTitle "Network" (humanize .key)) | default (printf "%s on %s" $siteTitle (humanize .key)) }}">
                 <img loading="lazy" width="31" height="31" src="{{ printf "/img/social-icons/%s.svg" .key }}" alt="{{ .key }} icon">
             </a>
         </li>
