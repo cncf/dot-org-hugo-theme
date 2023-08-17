@@ -71,7 +71,7 @@
 
             <div class="copyright__accessibility-git-wrapper">
                 {{ if .Site.Params.accessibility.help_url }}
-                <a href="{{ .Site.Params.accessibility.help_url }}">{{ .Site.Params.accessibility.help_text | default
+                <a href="{{ .Site.Params.accessibility.help_url }}" class="nowrap">{{ .Site.Params.accessibility.help_text | default
                     "Accessibility Statement" }}</a>
                 {{ end }}
 
