@@ -85,10 +85,21 @@ or you can build your site using:
 npm run build
 ```
 
-
 ## Config files
 
-TODO
+See /exampleSite/config/ for example configuration files.
+
+You should copy these across or merge them with your existing config.
+
+## Custom front matter
+
+We have created custom front matter to use in your markdown files:
+
+#### Hide the page title / article header
+
+```
+hideHeader: true
+```
 
 ## Custom shortcodes 
 
