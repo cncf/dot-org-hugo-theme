@@ -12,7 +12,7 @@
         {{ range $validLinks }}
         <li>
             <a href="{{ .value }}" target="_blank" rel="noopener noreferrer">
-                <img width="31" height="31" src="{{ printf "/img/social-icons/%s.svg" .key }}" alt="{{ .key }} icon">
+                <img loading="lazy" width="31" height="31" src="{{ printf "/img/social-icons/%s.svg" .key }}" alt="{{ .key }} icon">
             </a>
         </li>
         {{ end }}
