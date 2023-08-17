@@ -5,6 +5,10 @@ This Hugo theme is ideal for powering the website of a small organization. It wa
 - **Accessible** - design and markup comply with WCAG 2.1 AA guidelines
 - **Performant** - HTML/CSS/JS written from scratch to be as fast as possible without relying on frameworks or libraries
 - **Multilingual** - ready to support multiple languages of content
+- **Mega Menu** - large menu with dropdown sections
+- **FAQ accordion** - FAQ page with accordion structure
+
+[View demo site](https://dot-org-hugo-theme-demo.netlify.app/)
 
 # Installation
 
