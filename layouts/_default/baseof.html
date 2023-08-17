@@ -9,8 +9,7 @@
             {{ if ne .Params.showHeader false }}
                 <header>
                     {{ if and (eq .Section "blog") (eq .Kind "page") }}
-                    <!-- Insert your text here -->
-                    <p>Your text that appears above the blog single title.</p>
+                    {{- partial "blog/breadcrumb.html" . -}}
                     {{ end }}
                     <h1 class="title">{{ .Title }}</h1>
                 </header>
