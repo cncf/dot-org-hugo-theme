@@ -92,7 +92,117 @@ TODO
 
 ## Custom shortcodes 
 
-TODO
+### Button
+
+There is a button ready to be inserted in to markdown files:
+
+```
+{{< button link="/path/to/page" text="Default Button" >}}
+```
+```
+{{< button link="/path/to/page" style="secondary" text="Secondary Button" >}}
+```
+```
+{{< button link="/path/to/page" style="tertiary" text="Tertiary Button" >}}
+```
+
+Options:
+- link # (required) the button link
+- text # (required) the button text
+- style # (optional) secondary, tertiary
+
+### Current Year
+
+Insert the current year easily with this shortcode:
+
+```
+{{< current_year >}}
+```
+
+Useful for copyright notices and evergreen blog content.
+
+### iFrame
+
+Insert an iFrame with your desired content.
+
+```
+{{< iframe src="https://www.slideshare.net/slideshow/embed_code/key/vTNvkwIXN4pmr8" >}}
+```
+
+Options:
+- src # (required) the page to display
+- width # (optional)
+- height # (optional)
+
+### Img
+
+Inserts an image in a more advanced format than standard Hugo syntax.
+
+```
+{{< img src="/img/blog/image-name.png" >}}
+```
+
+Options: 
+- src # (required) the image link
+- alt # (optional) describing the image, defaults to filename
+- width # (optional) recommended 
+- height # (optional) recommended
+- caption # (optional) markdown is accepted
+- loading # (optional) defaults to lazy, use eager above the fold
+
+### Responsive Table
+
+Wrap your large tables with this shortcode so they overflow on mobile:
+
+```
+{{< responsive_table >}}
+| Option | Option | Description |
+| ------ | ------ | ----------- |
+| one    | data   | path to data files to supply the data that will be passed into templates. |
+| two    | engine | engine to be used for processing templates. Handlebars is the default. |
+| three  | ext    | extension to be used for dest files. |
+{{< /responsive_table >}}
+```
+
+### Spacer
+
+A spacer is useful for spacing out content on your page. By default our spacer inserts a 50px height space. Our spacer is responsive, so on mobile devices the value is reduced by 50% (i.e. 50px space becomes 25px space).
+
+```
+{{< spacer >}}
+```
+```
+{{< spacer 100 >}}
+```
+
+### Table of Contents (TOC)
+
+Insert a Table of Contents automatically in to your page. Picks up on all H2 elements on the page.
+
+```
+{{< toc >}}
+```
+
+### YouTube Enhanced
+
+A privacy friendly and fast YouTube embed.
+
+```
+{{< youtube_enhanced id="9oVr7rrNZVI" >}}
+```
+
+For embedding playlists, a singular video id must be mentioned as playlists do not have a thumbnail.
+
+```
+{{< youtube_enhanced id="xPSXtoJNGLs" title="Play Videos from Kubecon" playlistid="PLj6h78yzYM2PyrvCoOii4rAopBswfz1p7" >}}
+```
+
+Options:
+- id # (required)
+- title # (optional) defaults to Play Video
+- playlistid # (optional) your playlist ID
+- autoload # (optional) defaults to false
+- start # (optional) the start time in seconds, default 0
 
 ## Setting up a local instance for improving this theme
 

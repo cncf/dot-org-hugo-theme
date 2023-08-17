@@ -1,0 +1,49 @@
+{{ $src := .Get "src" }}
+{{ $width := .Get "width" | replaceRE "[^0-9]" "" }}
+{{ $height := .Get "height" | replaceRE "[^0-9]" "" }}
+{{ $caption := .Get "caption" }}
+{{ $loading := .Get "loading" | default "lazy" }}
+
+{{/* Extract the file name from the path */}}
+{{ $filenameWithExt := path.Base $src }}
+
+{{/* Remove the file extension */}}
+{{ $filename := strings.TrimSuffix (path.Ext $filenameWithExt) $filenameWithExt }}
+
+{{/* Convert hyphens and underscores to spaces */}}
+{{ $name := $filename | replaceRE "[-_]" " " }}
+
+{{/* Optionally capitalize the first letter (if desired) */}}
+{{ $nameCapitalized := humanize $name }}
+
+{{/* Check for alt, and default to $nameCapitalized if not provided */}}
+{{ $altVal := .Get "alt" }}
+{{ $safeAltVal := $altVal | safeHTMLAttr }}
+
+{{ $alt := "" }} {{/* Declare the variable first */}}
+
+{{ if $safeAltVal }}
+    {{ $alt = $safeAltVal }}
+{{ else }}
+    {{ $alt = $nameCapitalized | safeHTMLAttr }}
+{{ end }}
+
+{{ if $src }}
+
+{{ if $caption}}
+  <figure>
+  {{ end }}
+      <img
+        src="{{ $src }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
+        alt="{{ $alt }}"
+        loading="{{ $loading }}"
+        >
+  {{ if $caption}}
+    <figcaption>{{ $caption | markdownify }}</figcaption>
+  </figure>
+  {{ end }}
+</div>
+
+{{ end }}

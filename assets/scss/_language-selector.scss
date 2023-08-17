@@ -31,9 +31,10 @@
             right: 0;
             @media (min-width: $min-desktop) {
                 padding-top: 30px;
+                width: 100px;
             }
         }
-        
+
         .dropdown-arrow {
             &::after {
                 // opening menu.
