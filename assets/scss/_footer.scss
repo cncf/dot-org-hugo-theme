@@ -122,16 +122,18 @@
         a {
             font-weight: 800;
             text-decoration: none;
+        }
+        &__accessibility-git-wrapper {
             @media (max-width: $mobile-max) {
-                margin-right: 10px;
-                & + a {
-                    border-left: 1px solid white;
-                    padding-left: 10px;
+                a {
+                    margin-right: 10px;
+                    & + a {
+                        border-left: 1px solid white;
+                        padding-left: 10px;
+                    }
                 }
             }
-        }
-        @media (min-width: $min-desktop) {
-            &__accessibility-git-wrapper {
+            @media (min-width: $min-desktop) {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
