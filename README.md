@@ -289,3 +289,10 @@ cd dot-org-hugo-theme/exampleSite
 npm install
 npm run dev
 ```
+
+## Showcase
+
+Check out some themes that are using the Dot-Org theme for Hugo:
+
+- [TODO Group](https://todogroup.org)
+- [DeepCausality](https://deepcausality.com)
