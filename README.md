@@ -1,6 +1,6 @@
-# Dot-Org Hugo theme
+# Dot-Org theme for Hugo
 
-This Hugo theme is ideal for powering the website of a small organization. It was built initially for the [TODO Group](https://todogroup.org/) and has the following strenghts:
+This Hugo theme is ideal for powering the website of a small organization. It was built initially for the [TODO Group](https://todogroup.org/) and has the following strengths:
 - **Modern** - simple yet effective modern design
 - **Accessible** - design and markup comply with WCAG 2.1 AA guidelines
 - **Performant** - HTML/CSS/JS written from scratch to be as fast as possible without relying on frameworks or libraries
