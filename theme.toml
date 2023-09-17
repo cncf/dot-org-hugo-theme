@@ -5,7 +5,7 @@ description = "This modern, accesible, performant theme is ideal for powering th
 homepage = "https://todogroup.org/"
 demosite = ""
 min_version = "0.110.0"
-theme_version = "1.0.0"
+theme_version = "0.1.0"
 
 tags = [
   "performance",
