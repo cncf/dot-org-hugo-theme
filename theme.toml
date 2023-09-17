@@ -8,14 +8,43 @@ min_version = "0.110.0"
 theme_version = "0.1.0"
 
 tags = [
-  "performance",
   "accessibility",
+  "accessible",
+  "archive",
+  "blog",
+  "clean",
+  "company",
+  "light",
+  "modern",
   "multilingual",
-  "responsive"
+  "performance",
+  "project",
+  "responsive",
+  "simple",
+  "white",
 ]
 
 features = [
-  "Multilingual"
+  "accessible",
+  "blog",
+  "buttons",
+  "card",
+  "columns",
+  "custom-css",
+  "custom-js",
+  "faq",
+  "favicon",
+  "iframe",
+  "mega-menu",
+  "minified-assets",
+  "mobile-menu",
+  "multilingual",
+  "responsive",
+  "shortcodes",
+  "single-column",
+  "social-icons",
+  "table-of-contents",
+  "youtube",
 ]
 
 [author]
