@@ -1,6 +1,6 @@
-# Dot-Org Hugo theme
+# Dot-Org theme for Hugo
 
-This Hugo theme is ideal for powering the website of a small organization. It was built initially for the [TODO Group](https://todogroup.org/) and has the following strenghts:
+This Hugo theme is ideal for powering the website of a small organization. It was built initially for the [TODO Group](https://todogroup.org/) and has the following strengths:
 - **Modern** - simple yet effective modern design
 - **Accessible** - design and markup comply with WCAG 2.1 AA guidelines
 - **Performant** - HTML/CSS/JS written from scratch to be as fast as possible without relying on frameworks or libraries
@@ -107,17 +107,26 @@ hideHeader: true
 
 ## Custom shortcodes 
 
+You can use our custom shortcodes to quickly style your website in markdown. Due to the way Hugo deals with nested content, particularly nested shortcodes, you may find that shortcodes that are children of other shortcodes do not render as they should. If this happens to your site, this can often be resolved by allowing Hugo to [render "unsafe" HTML](https://gohugo.io/getting-started/configuration-markup/#goldmark). Add the following to your config YAML file:
+
+```yaml
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+```
+
 ### Button
 
 There is a button ready to be inserted in to markdown files:
 
-```
+```md
 {{< button link="/path/to/page" text="Default Button" >}}
 ```
-```
+```md
 {{< button link="/path/to/page" style="secondary" text="Secondary Button" >}}
 ```
-```
+```md
 {{< button link="/path/to/page" style="tertiary" text="Tertiary Button" >}}
 ```
 
@@ -125,6 +134,48 @@ Options:
 - link # (required) the button link
 - text # (required) the button text
 - style # (optional) secondary, tertiary
+
+### Cards
+
+An outlined box that is useful for highlighting information or using to wrap list elements.
+
+```
+{{< cards count=2 >}}
+{{< card >}}
+## Special Feature 1
+Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo
+{{< spacer >}}
+[Download](#)
+{{< /card >}}
+{{< card >}}
+## Special Feature 2
+Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo
+{{< spacer >}}
+[About us](#)
+{{< /card >}}
+{{< /cards >}}
+```
+
+Options:
+- count # (optional) number of columns on desktop; 2,3,4. Default: 3.
+
+### Columns
+
+A responsive column structure.
+
+```
+{{< columns >}}
+{{< column >}}
+Column 1
+{{< /column >}}
+{{< column >}}
+Column 2
+{{< /column >}}
+{{< /columns >}}
+```
+
+Options:
+- count # (optional) number of columns on desktop; 2,3,4. Default: 3.
 
 ### Current Year
 
@@ -148,6 +199,7 @@ Options:
 - src # (required) the page to display
 - width # (optional)
 - height # (optional)
+- title # (optional) the title of the iframe for accessibility
 
 ### Img
 
@@ -164,6 +216,14 @@ Options:
 - height # (optional) recommended
 - caption # (optional) markdown is accepted
 - loading # (optional) defaults to lazy, use eager above the fold
+
+### Linebreak
+
+Sometimes markdown can bunch paragraphs together. You can force a line return using the linebreak shortcode.
+
+```
+{{< br >}}
+```
 
 ### Responsive Table
 
@@ -229,3 +289,10 @@ cd dot-org-hugo-theme/exampleSite
 npm install
 npm run dev
 ```
+
+## Showcase
+
+Check out some themes that are using the Dot-Org theme for Hugo:
+
+- [TODO Group](https://todogroup.org)
+- [DeepCausality](https://deepcausality.com)

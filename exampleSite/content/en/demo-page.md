@@ -60,6 +60,63 @@ Donec pede justo, fringilla vel, aliquet nec, vulputate get, arcu. In enim justo
 
 Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
 
+## Columns
+
+Use responsive columns to layout your page structure. You can use the option count to have 2, 3 or 4 column layouts.
+
+{{< columns count=2 >}}
+{{< column >}}
+### Column 1
+Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo:
+
+- Aenean commodo ligula get dolor.
+- Aenean massa.
+- Cum sociis natoque penatibus et.
+- Magnis dis parturient montes.
+
+{{< /column >}}
+{{< column >}}
+### Column 2
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula get dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate get, arcu. In enim justo, rhoncus ut imperdiet a.
+{{< /column >}}
+{{< /columns >}}
+
+Here's a 4 column example:
+
+{{< columns count=4 >}}
+{{< column >}}
+#### Column 1
+{{< /column >}}
+{{< column >}}
+#### Column 2
+{{< /column >}}
+{{< column >}}
+#### Column 3
+{{< /column >}}
+{{< column >}}
+#### Column 4
+{{< /column >}}
+{{< /columns >}}
+
+## Cards
+
+Use the cards shortcode to display highlighted content on your page.
+
+{{< cards >}}
+{{< card >}}
+## Something special
+Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo
+{{< spacer >}}
+[Get our app](#)
+{{< /card >}}
+{{< card >}}
+## Our special feature
+Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo
+{{< spacer >}}
+[See our special feature](#)
+{{< /card >}}
+{{< /cards >}}
+
 ## YouTube standard (Hugo Shortcode) (not recommended)
 
 {{< youtube QFSBC7G0URY >}}

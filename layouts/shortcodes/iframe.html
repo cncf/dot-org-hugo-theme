@@ -2,6 +2,8 @@
 src="{{ .Get "src" }}" 
 width="{{ with .Get "width" }}{{ . }}{{ else }}100%{{ end }}" 
 height="{{ with .Get "height" }}{{ . }}{{ else }}600px{{ end }}" 
+title="{{ .Get "title" }}"
 frameborder="0" 
-allowfullscreen>
+allowfullscreen
+>
 </iframe>
