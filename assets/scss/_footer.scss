@@ -126,11 +126,13 @@
             @media (max-width: $mobile-max) {
                 margin-top: 20px;
                 a {
-                    margin-right: 10px;
                     & + a {
                         border-left: 1px solid white;
                         padding-left: 10px;
                     }
+                }
+                a:first-of-type {
+                    margin-right: 10px;
                 }
             }
             @media (min-width: $min-desktop) {
