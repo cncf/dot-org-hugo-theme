@@ -179,7 +179,9 @@
 
     // Top row only.
     .top-menu-item {
-        margin-right: 20px;
+        @media (min-width: $min-desktop) {
+            margin-right: 20px;
+        }
         @media (min-width: $desktop-width) {
             margin-right: 60px;
         }
