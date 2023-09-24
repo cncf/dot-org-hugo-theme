@@ -1,6 +1,8 @@
 en:
   languageName: English
   weight: 1
+  ### copyright (markdown can be used) ###
+  copyright: "Copyright &copy; {{< current_year >}} Company Name. All Rights Reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)."
   params:
     title: "Site Title"
     description: "Site Description"
@@ -16,8 +18,6 @@ en:
     footer_cta:
       text: "Join us"
       link: "/example-page/"
-    ### copyright (markdown can be used) ###
-    copyright: "Copyright &copy; {{< current_year >}} Company Name. All Rights Reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)."
     github_edit: "Edit this page on GitHub"
   ### example menu showing children ###
   menu:
