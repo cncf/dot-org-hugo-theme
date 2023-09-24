@@ -3,9 +3,9 @@ en:
   weight: 1
   ### copyright (markdown can be used) ###
   copyright: "Copyright &copy; {{< current_year >}} Company Name. All Rights Reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)."
+  title: "Site Title"
+  description: "Site Description"
   params:
-    title: "Site Title"
-    description: "Site Description"
     ### accessibility ###
     accessibility:
       skip_text: "Skip to content"
