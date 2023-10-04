@@ -15,7 +15,7 @@
 /* right-facing triangle "Play" icon */
 .lite-youtube-fallback::before {
     display: block;
-    content: '';
+    content: "";
     border: solid transparent;
     border-width: 2em 0 2em 3em;
     border-left-color: red;
@@ -27,4 +27,20 @@
 
 .lite-youtube-fallback:focus {
     outline: 2px solid red;
+}
+
+lite-youtube {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media (min-width: $min-desktop) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+lite-youtube + lite-youtube {
+    margin-top: 0;
+    @media (min-width: $min-desktop) {
+        margin-top: 0;
+    }
 }

@@ -9,8 +9,12 @@ iframe {
     border-left-style: inset;
 }
 
-iframe,
-lite-youtube {
+.responsive-iframe-wrapper {
+    position: relative;
+    padding-bottom: 66.66%; // 3:2 Aspect Ratio, 75% 4:3 Aspect Ratio, 56.25% 16:9 Aspect Ratio,
+    height: 0;
+    overflow: hidden;
+    background-color: var(--gray-200);
     margin-top: 30px;
     margin-bottom: 30px;
     @media (min-width: $min-desktop) {
@@ -18,10 +22,10 @@ lite-youtube {
         margin-bottom: 60px;
     }
 }
-
-lite-youtube + lite-youtube {
-    margin-top: 0;
-    @media (min-width: $min-desktop) {
-        margin-top: 0;
-    }
+.responsive-iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

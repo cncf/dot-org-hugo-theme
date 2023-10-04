@@ -192,7 +192,7 @@ Useful for copyright notices and evergreen blog content.
 Insert an iFrame with your desired content.
 
 ```
-{{< iframe src="https://www.slideshare.net/slideshow/embed_code/key/vTNvkwIXN4pmr8" >}}
+{{< iframe title="My slides" src="https://www.slideshare.net/slideshow/embed_code/key/vTNvkwIXN4pmr8" >}}
 ```
 
 Options:
@@ -200,6 +200,7 @@ Options:
 - width # (optional)
 - height # (optional)
 - title # (optional) the title of the iframe for accessibility
+- loading # (optional) defaults to lazy
 
 ### Img
 
