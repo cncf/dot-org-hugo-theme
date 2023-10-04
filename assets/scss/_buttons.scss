@@ -21,14 +21,14 @@
         &:hover,
         &:active {
             color: var(--white);
-            background-color: var(--primary-700);
+            background-color: var(--primary-500);
         }
     }
     &.tertiary {
         background-color: var(--primary-400);
         &:hover {
             color: var(--white);
-            background-color: var(--primary-700);
+            background-color: var(--primary-500);
         }
         &:active {
             color: var(--black);

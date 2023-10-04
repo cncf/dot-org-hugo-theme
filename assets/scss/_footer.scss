@@ -42,14 +42,13 @@
             grid-template-columns: repeat(auto-fit, minmax(125px, 200px));
             gap: 15px;
             a {
-                font-size: 11px;
+                font-size: 13px;
+                font-weight: 400;
                 text-decoration: none;
-                letter-spacing: 0.2px;
             }
             .top-menu-item {
-                font-size: 12px;
+                font-size: 15px;
                 font-weight: 800;
-                letter-spacing: 0.6px;
                 margin-top: 0;
                 margin-bottom: 20px;
             }
@@ -111,7 +110,7 @@
     }
 
     .copyright {
-        font-size: 10px;
+        font-size: 11px;
         line-height: 150%;
         letter-spacing: 0.2px;
         @media (min-width: $min-desktop) {
@@ -127,11 +126,13 @@
             @media (max-width: $mobile-max) {
                 margin-top: 20px;
                 a {
-                    margin-right: 10px;
                     & + a {
                         border-left: 1px solid white;
                         padding-left: 10px;
                     }
+                }
+                a:first-of-type {
+                    margin-right: 10px;
                 }
             }
             @media (min-width: $min-desktop) {
@@ -139,6 +140,7 @@
                 flex-direction: column;
                 gap: 10px;
                 margin-left: 80px;
+                text-align: right;
             }
         }
         p {

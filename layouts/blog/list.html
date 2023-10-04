@@ -1,10 +1,12 @@
 {{ define "main" }}
-{{ .Content }}
-{{- range .Data.Pages.ByDate.Reverse }}
-    <article class="blog-item">
-      <h2 class="blog-item__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{- partial "blog/byline.html" . }}
-      <p class="blog-item__summary">{{ .Summary }}</p>
-    </article>
+  {{ .Content }}
+  {{ $paginator := .Paginate .Pages }}
+  {{- range $paginator.Pages }}
+      <article class="blog-item">
+        <h2 class="blog-item__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{- partial "blog/byline.html" . }}
+        <p class="blog-item__summary">{{ .Summary }}</p>
+      </article>
   {{ end }}
+  {{ template "_internal/pagination.html" . }}
 {{ end }}

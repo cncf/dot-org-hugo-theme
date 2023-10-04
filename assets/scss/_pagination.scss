@@ -1,0 +1,37 @@
+.pagination {
+    display: flex;
+    list-style: none;
+    border-radius: 0.25rem;
+    margin: 20px 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1rem;
+    @media (max-width: 420px) {
+        padding: 0.75rem 0.75rem;
+    }
+    margin-left: -1px;
+    line-height: 1.25;
+    background-color: #fff;
+}
+
+.homepage .page-link,
+.listing .page-link {
+    background-color: #fff;
+}
+
+.page-item.disabled .page-link {
+    color: var(--gray-600);
+    pointer-events: none;
+    cursor: auto;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: var(--black);
+    border: 1px solid var(--black);
+}
