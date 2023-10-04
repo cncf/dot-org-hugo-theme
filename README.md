@@ -102,7 +102,7 @@ We have created custom front matter to use in your markdown files:
 #### Hide the page title / article header
 
 ```
-hideHeader: true
+showHeader: false
 ```
 
 ## Custom shortcodes 
