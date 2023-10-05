@@ -1,9 +1,14 @@
-<iframe 
-src="{{ .Get "src" }}" 
-width="{{ with .Get "width" }}{{ . }}{{ else }}100%{{ end }}" 
-height="{{ with .Get "height" }}{{ . }}{{ else }}600px{{ end }}" 
-title="{{ .Get "title" }}"
-frameborder="0" 
-allowfullscreen
->
-</iframe>
+{{ $loading := .Get "loading" | default "lazy" }}
+
+<div class="responsive-iframe-wrapper">
+    <iframe 
+    src="{{ .Get "src" }}" 
+    width="{{ with .Get "width" }}{{ . }}{{ else }}100%{{ end }}" 
+    height="{{ with .Get "height" }}{{ . }}{{ else }}600px{{ end }}" 
+    title="{{ .Get "title" }}"
+    frameborder="0" 
+    allowfullscreen
+    loading="{{ $loading }}"
+    >
+    </iframe>
+</div>

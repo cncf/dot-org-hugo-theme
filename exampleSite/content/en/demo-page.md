@@ -262,6 +262,12 @@ Embedding tweets like this loads lots of tracking scripts and is not recommended
 
 {{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
 
+## Iframe
+
+You can embed iFrame content simply using our shortcode:
+
+{{< iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT6TcnSJki1RdzzDTbLCKDl96POVoW4bNZH--0lsJXNrPRRjPC83o2DGKuhZj38qjALnZJPLa0yhMW5/embed?start=false&loop=true&delayms=5000" >}}
+
 ## Footnotes
 
 Footnote 1 link[^first].
