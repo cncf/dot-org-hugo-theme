@@ -82,9 +82,8 @@ es:
   languageName: Spanish
   contentDir: content/es
   weight: 2
-  params:
-    title: "Título del Sitio"
-    description: "Descripción del Sitio"
+  title: "Título del Sitio"
+  description: "Descripción del Sitio"
   menu:
     main:
     - identifier: "about"
