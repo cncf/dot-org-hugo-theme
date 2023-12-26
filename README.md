@@ -105,6 +105,19 @@ We have created custom front matter to use in your markdown files:
 showHeader: false
 ```
 
+## Search index
+
+[Pagefind](https://pagefind.app/) can be used to search the contents of your site. The search and results UI can be inserted on a page using the [shortcode below](#search-form). In order to see the UI, the pagefind index must be built from the files in your `public` directory. 
+
+To build the pagefind index follow these commands:
+
+```
+npm run build
+npx -y pagefind --site public --serve
+```
+
+You should then be able to browse your site at `http://localhost:1414` and see the search form and results where they are inserted.
+
 ## Custom shortcodes 
 
 You can use our custom shortcodes to quickly style your website in markdown. Due to the way Hugo deals with nested content, particularly nested shortcodes, you may find that shortcodes that are children of other shortcodes do not render as they should. If this happens to your site, this can often be resolved by allowing Hugo to [render "unsafe" HTML](https://gohugo.io/getting-started/configuration-markup/#goldmark). Add the following to your config YAML file:
@@ -240,6 +253,14 @@ Wrap your large tables with this shortcode so they overflow on mobile:
 {{< /responsive_table >}}
 ```
 
+### Search form
+
+A search form for querying the pagefind index and showing results.
+
+```
+{{< search_form >}}
+```
+
 ### Spacer
 
 A spacer is useful for spacing out content on your page. By default our spacer inserts a 50px height space. Our spacer is responsive, so on mobile devices the value is reduced by 50% (i.e. 50px space becomes 25px space).
@@ -279,6 +300,7 @@ Options:
 - playlistid # (optional) your playlist ID
 - autoload # (optional) defaults to false
 - start # (optional) the start time in seconds, default 0
+
 
 ## Setting up a local instance for improving this theme
 
