@@ -107,7 +107,7 @@ showHeader: false
 
 ## Search index
 
-[Pagefind](https://pagefind.app/) can be used to search the contents of your site. The search and results UI can be inserted on a page using the [shortcode below](#search-form). In order to see the UI, the pagefind index must be built from the files in your `public` directory and then served through pagefind: 
+[Pagefind](https://pagefind.app/) can be used to search the contents of your site. The search and results UI can be inserted on a page using the [shortcode below](#search-form). In order to see the UI, the pagefind index must be built from the files in your `public` directory and then served like this: 
 
 ```
 npm run build
