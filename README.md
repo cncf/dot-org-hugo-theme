@@ -107,16 +107,14 @@ showHeader: false
 
 ## Search index
 
-[Pagefind](https://pagefind.app/) can be used to search the contents of your site. The search and results UI can be inserted on a page using the [shortcode below](#search-form). In order to see the UI, the pagefind index must be built from the files in your `public` directory. 
-
-To build the pagefind index follow these commands:
+[Pagefind](https://pagefind.app/) can be used to search the contents of your site. The search and results UI can be inserted on a page using the [shortcode below](#search-form). In order to see the UI, the pagefind index must be built from the files in your `public` directory and then served through pagefind: 
 
 ```
 npm run build
 npx -y pagefind --site public --serve
 ```
 
-You should then be able to browse your site at `http://localhost:1414` and see the search form and results where they are inserted.
+You should then be able to browse your site at http://localhost:1414 and see the search form and results where they are inserted.
 
 ## Custom shortcodes 
 
@@ -255,7 +253,7 @@ Wrap your large tables with this shortcode so they overflow on mobile:
 
 ### Search form
 
-A search form for querying the pagefind index and showing results.
+A search form for querying [the pagefind index](#search-index) and showing results.
 
 ```
 {{< search_form >}}
