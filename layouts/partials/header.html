@@ -1,4 +1,8 @@
-<header class="header">
+{{ $extra_header_class := "" }}
+{{ with .Site.Params.sticky_header }}
+  {{ $extra_header_class = "sticky" }}
+{{ end }}
+<header class="header {{ $extra_header_class }}">
     <div class="container wrap">
 
         {{ with .Site.Params.logo_on_white }}
