@@ -7,6 +7,11 @@
     {{- partial "head/csp.html" . }}
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}" />
+
+    {{ if .Params.noindex }}
+    <meta name="robots" content="noindex, nofollow" />
+    {{ end }}
+
     {{- partial "head/preload.html" . }}
     {{- partial "head/css.html" . }}
     {{- template "_internal/opengraph.html" . -}}
