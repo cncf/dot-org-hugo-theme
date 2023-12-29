@@ -11,6 +11,7 @@
     {{ if or .Params.noindex (not hugo.IsProduction) }}
     <meta name="robots" content="noindex, nofollow" />
     {{ end }}
+    {{hugo.IsProduction}}
 
     {{- partial "head/preload.html" . }}
     {{- partial "head/css.html" . }}
