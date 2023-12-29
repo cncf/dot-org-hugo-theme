@@ -1,8 +1,20 @@
 .header {
     width: 100%;
     background: var(--white);
-    position: relative;
     z-index: 20;
+
+    position: relative;
+    &.sticky {
+        position: sticky;
+        // remove sticky on smaller screens.
+        @media (min-width: 515px) and (max-height: 615px) {
+            position: relative;
+        }
+        top: 0;
+        left: 0;
+        right: 0;    
+    }
+    
     &:after {
         content: "";
         position: absolute;
