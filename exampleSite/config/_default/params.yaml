@@ -33,3 +33,6 @@ social_links:
   twitter: ""
   x: ""
   youtube: ""
+
+# Makes the header sticky on tall screens
+sticky_header: true
