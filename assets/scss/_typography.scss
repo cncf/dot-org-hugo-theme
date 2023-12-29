@@ -68,12 +68,14 @@ h4,
 .h4 {
     font-family: var(--rounded-font-family);
     font-weight: 900;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 150%;
     text-transform: uppercase;
     letter-spacing: 2.4px;
+    margin-block-start: 28px;
+    margin-block-end: 18px;
     @media (min-width: $min-desktop) {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -83,6 +85,8 @@ h5,
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.8px;
+    margin-block-start: 25px;
+    margin-block-end: 16px;
     @media (min-width: $min-desktop) {
         font-size: 16px;
     }
@@ -95,6 +99,8 @@ h6,
     font-weight: 800;
     font-size: 12px;
     letter-spacing: 0.8px;
+    margin-block-start: 20px;
+    margin-block-end: 14px;
     @media (min-width: $min-desktop) {
         font-size: 14px;
     }
