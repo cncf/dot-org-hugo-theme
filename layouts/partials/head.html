@@ -8,8 +8,8 @@
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}" />
 
-    {{ if .Params.noindex }}
-    <meta name="robots" content="noindex" />
+    {{ if or .Params.noindex (not hugo.IsProduction) }}
+    <meta name="robots" content="noindex, nofollow" />
     {{ end }}
 
     {{- partial "head/preload.html" . }}
