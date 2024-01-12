@@ -229,6 +229,16 @@ Options:
 - caption # (optional) markdown is accepted
 - loading # (optional) defaults to lazy, use eager above the fold
 
+### Intro
+
+Formats a paragraph with larger text as suitable for an introduction paragraph at the top of a page.
+
+```
+{{< intro >}}
+Paragraph text...
+{{< /intro >}}
+```
+
 ### Linebreak
 
 Sometimes markdown can bunch paragraphs together. You can force a line return using the linebreak shortcode.
