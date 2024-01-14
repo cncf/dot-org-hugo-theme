@@ -225,6 +225,7 @@
             }
         }
         > a {
+            cursor: default;
             &::after {
                 display: inline-block;
                 content: "";
