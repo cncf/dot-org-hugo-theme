@@ -235,7 +235,9 @@
             }
         }
         > a {
-            cursor: default;
+            @media (min-width: $min-desktop) {
+                cursor: default;
+            }
             &::after {
                 display: inline-block;
                 content: "";
