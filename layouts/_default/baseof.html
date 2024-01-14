@@ -5,7 +5,7 @@
         {{- partial "accessibility.html" . -}}
         {{- partial "header.html" . -}}
         
-        <section id="content" class="container wrap">
+        <section id="content" class="container wrap" {{ if .IsPage }}data-pagefind-body{{ end }}>
             {{ if ne .Params.showHeader false }}
                 <header>
                     {{ if and (eq .Kind "page") (ne .Section "") }}
