@@ -107,14 +107,14 @@ showHeader: false
 
 ## Search index
 
-[Pagefind](https://pagefind.app/) can be used to search the contents of your site. The search and results UI can be inserted on a page using the [shortcode below](#search-form). In order to see the UI, the pagefind index must be built from the files in your `public` directory and then served like this: 
+[Pagefind](https://pagefind.app/) can be used to search the contents of your site. We include a search.html in the theme that is already set up. The search and results UI can also be inserted into any page using the [shortcode](#search-form). For Pagefind to work, the pagefind index must be built from the files in your `public` directory. First, make sure your site it built, and then install pagefind and index the site:
 
 ```
 npm run build
-npx -y pagefind --site public --serve
+npx -y pagefind --site public
 ```
 
-You should then be able to browse your site at http://localhost:1414 and see the search form and results where they are inserted.
+Everytime your content is updated, you need to update the search index by again running `npx -y pagefind --site public`, so this should be part of your deployment process.
 
 ## Custom shortcodes 
 
@@ -308,8 +308,14 @@ If you want to create improvements for this theme for everyone, follow these ins
 git clone https://github.com/cncf/dot-org-hugo-theme.git
 cd dot-org-hugo-theme/exampleSite
 npm install
-npm run dev
+npm run dev:start
 ```
+
+## Other npm commands for working with a local instance
+
+- npm run dev:start - Starts the local dev environment using exampleSite
+- npm run dev:start-with-pagefind - Starts the local dev environment using exampleSite with working pagefind search
+- npm run dev:build - Builds the site using exampleSite
 
 ## Showcase
 

@@ -5,3 +5,4 @@ node_modules/
 .DS_Store
 .netlify
 hugo_stats.json
+exampleSite/static/pagefind
