@@ -225,7 +225,7 @@
             }
         }
         > a {
-            @media (hover: hover) {
+            @media (min-width: $min-desktop) {
                 cursor: default;
             }
             &::after {
