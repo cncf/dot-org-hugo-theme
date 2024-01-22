@@ -166,8 +166,8 @@
         }
     }
     &__search-language-wrapper {
+        display: flex;
         @media (max-width: $mobile-max) {
-            display: flex;
             flex-direction: row-reverse;
             align-items: flex-start;
             gap: 40px;
