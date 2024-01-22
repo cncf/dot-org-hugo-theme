@@ -37,4 +37,4 @@ social_links:
 # Makes the header sticky on tall screens
 sticky_header: true
 # Enable search in header UI
-show_search: false
+show_search: true
