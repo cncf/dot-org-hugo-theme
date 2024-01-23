@@ -114,7 +114,7 @@ npm run build
 npx -y pagefind --site public
 ```
 
-Everytime your content is updated, you need to update the search index by again running `npx -y pagefind --site public`, so this should be part of your deployment process.
+Every time your content is updated, you need to update the search index by again running `npx -y pagefind --site public`, so this should be part of your deployment process.
 
 ## Custom shortcodes 
 
@@ -324,7 +324,7 @@ npm run dev:start
 ## Other npm commands for working with a local instance
 
 - npm run dev:start - Starts the local dev environment using exampleSite
-- npm run dev:start-with-pagefind - Starts the local dev environment using exampleSite with working pagefind search
+- npm run dev:start:with-pagefind - Starts the local dev environment using exampleSite with working pagefind search
 - npm run dev:build - Builds the site using exampleSite
 
 ## Showcase
