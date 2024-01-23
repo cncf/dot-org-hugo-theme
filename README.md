@@ -323,9 +323,9 @@ npm run dev:start
 
 ## Other npm commands for working with a local instance
 
-- npm run dev:start - Starts the local dev environment using exampleSite
-- npm run dev:start:with-pagefind - Starts the local dev environment using exampleSite with working pagefind search
-- npm run dev:build - Builds the site using exampleSite
+- `npm run dev:start` - Starts the local dev environment using exampleSite
+- `npm run dev:start:with-pagefind` - Starts the local dev environment using exampleSite with working pagefind search
+- `npm run dev:build` - Builds the site using exampleSite
 
 ## Showcase
 
