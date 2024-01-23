@@ -29,6 +29,10 @@
   --gray-600: #b1b1b1;
   --gray-700: #767676;
   --gray-800: #5f6367;
+
+  // Pagefind styles from https://pagefind.app/docs/ui-usage/#customising-the-styles
+  --pagefind-ui-text: var(--text-color) !important;
+  --pagefind-ui-font: var(--rounded-font-family) !important;
 }
 
 // Define SCSS variables.

@@ -105,6 +105,17 @@ We have created custom front matter to use in your markdown files:
 showHeader: false
 ```
 
+## Search index
+
+[Pagefind](https://pagefind.app/) can be used to search the contents of your site. We include a search.html in the theme that is already set up. The search and results UI can also be inserted into any page using the [shortcode](#search-form). For Pagefind to work, the pagefind index must be built from the files in your `public` directory. First, make sure your site it built, and then install pagefind and index the site:
+
+```
+npm run build
+npx -y pagefind --site public
+```
+
+Everytime your content is updated, you need to update the search index by again running `npx -y pagefind --site public`, so this should be part of your deployment process.
+
 ## Custom shortcodes 
 
 You can use our custom shortcodes to quickly style your website in markdown. Due to the way Hugo deals with nested content, particularly nested shortcodes, you may find that shortcodes that are children of other shortcodes do not render as they should. If this happens to your site, this can often be resolved by allowing Hugo to [render "unsafe" HTML](https://gohugo.io/getting-started/configuration-markup/#goldmark). Add the following to your config YAML file:
@@ -250,6 +261,14 @@ Wrap your large tables with this shortcode so they overflow on mobile:
 {{< /responsive_table >}}
 ```
 
+### Search form
+
+A search form for querying [the pagefind index](#search-index) and showing results.
+
+```
+{{< search_form >}}
+```
+
 ### Spacer
 
 A spacer is useful for spacing out content on your page. By default our spacer inserts a 50px height space. Our spacer is responsive, so on mobile devices the value is reduced by 50% (i.e. 50px space becomes 25px space).
@@ -290,6 +309,7 @@ Options:
 - autoload # (optional) defaults to false
 - start # (optional) the start time in seconds, default 0
 
+
 ## Setting up a local instance for improving this theme
 
 If you want to create improvements for this theme for everyone, follow these instructions to launch the exampleSite. 
@@ -298,8 +318,14 @@ If you want to create improvements for this theme for everyone, follow these ins
 git clone https://github.com/cncf/dot-org-hugo-theme.git
 cd dot-org-hugo-theme/exampleSite
 npm install
-npm run dev
+npm run dev:start
 ```
+
+## Other npm commands for working with a local instance
+
+- npm run dev:start - Starts the local dev environment using exampleSite
+- npm run dev:start-with-pagefind - Starts the local dev environment using exampleSite with working pagefind search
+- npm run dev:build - Builds the site using exampleSite
 
 ## Showcase
 
