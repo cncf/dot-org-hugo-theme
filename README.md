@@ -7,6 +7,7 @@ This Hugo theme is ideal for powering the website of a small organization. It wa
 - **Multilingual** - ready to support multiple languages of content
 - **Mega Menu** - large menu with dropdown sections
 - **FAQ accordion** - FAQ page with accordion structure
+- **Search** - PageFind search is integrated
 
 [View demo site](https://dot-org-hugo-theme-demo.netlify.app/)
 
@@ -103,6 +104,12 @@ We have created custom front matter to use in your markdown files:
 
 ```
 showHeader: false
+```
+
+#### Add noindex to a page
+
+```
+noindex: true
 ```
 
 ## Search index
