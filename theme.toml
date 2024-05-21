@@ -4,8 +4,8 @@ licenselink = "https://github.com/cncf/dot-org-hugo-theme/blob/main/LICENSE"
 description = "This modern, accesible, performant theme is ideal for powering the website of a small organization"
 homepage = "https://dot-org-hugo-theme-demo.netlify.app/"
 demosite = "https://dot-org-hugo-theme-demo.netlify.app/"
-min_version = "0.110.0"
-theme_version = "0.1.4"
+min_version = "0.121.0"
+theme_version = "0.1.5"
 
 tags = [
   "accessibility",
