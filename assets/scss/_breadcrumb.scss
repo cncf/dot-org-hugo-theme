@@ -1,11 +1,24 @@
-.breadcrumb {
+.breadcrumbs {
     margin-block-start: 70px;
     margin-block-end: 0;
     @media (min-width: $desktop-width) {
         margin-block-start: 100px;
         margin-block-end: 0;
     }
-    font-family: Nunito;
+    font-family: var(--rounded-font-family);
+}
+
+.breadcrumbs-list {
+    list-style-image: none;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.breadcrumb {
     font-size: 14px;
     @media (min-width: 600px) {
         font-size: 16px;
@@ -21,13 +34,19 @@
     }
 }
 
-.breadcrumb + .title,
-.breadcrumb + h1,
-.breadcrumb + .h1 {
-    margin-block-start: 30px;
+.breadcrumb + .breadcrumb::before {
+    content: "»";
+    margin-right: 5px;
+    color: var(--gray-600);
+}
+
+.breadcrumbs + .title,
+.breadcrumbs + h1,
+.breadcrumbs + .h1 {
+    margin-block-start: 20px;
     margin-block-end: 50px;
     @media (min-width: $desktop-width) {
-        margin-block-start: 60px;
+        margin-block-start: 50px;
         margin-block-end: 80px;
     }
 }

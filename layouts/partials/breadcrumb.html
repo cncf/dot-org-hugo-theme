@@ -1,1 +1,10 @@
-<p class="breadcrumb"><a href="/{{ .Section }}/">{{ .Section | humanize }}</a></p>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ol class="breadcrumbs-list">
+        {{- range .Ancestors.Reverse }}
+        <li class="breadcrumb">
+            <a href="{{ .RelPermalink }}">{{ if .IsHome }}{{ i18n "breadcrumb_home" | default "Home" }}{{ else }}{{ .Title }}{{ end
+                }}</a>
+        </li>
+        {{- end }}
+    </ol>
+</nav>
