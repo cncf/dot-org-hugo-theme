@@ -12,6 +12,15 @@ const closeAccordion = (accordion) => {
     content.style.maxHeight = null;
 };
 
+// If sticky_header add offset of 80/100 based on device width.
+const getScrollOffset = () => {
+    if (window.innerWidth < 1000) {
+        return stickyHeader ? 80 : 0; 
+    } else {
+        return stickyHeader ? 100 : 0;
+    }
+};
+
 accordions.forEach((accordion) => {
     const title = accordion.querySelector(".accordion__title");
     const content = accordion.querySelector(".accordion__content");
@@ -23,13 +32,15 @@ accordions.forEach((accordion) => {
             accordions.forEach((accordion) => closeAccordion(accordion));
             openAccordion(accordion);
 
-            // Use setTimeout to wait a moment before scrolling into view
+            // Use setTimeout to wait a moment before scrolling into view.
             setTimeout(() => {
-                accordion.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const offset = getScrollOffset();
+                const elementTop = accordion.getBoundingClientRect().top;
+                window.scrollBy({
+                    top: elementTop - offset,
+                    behavior: 'smooth'
                 });
-            }, 500);
+            }, 250);
         }
     };
 });
