@@ -37,7 +37,7 @@
         src="{{ $src }}"
         width="{{ $width }}"
         height="{{ $height }}"
-        alt="{{ $alt }}"
+        alt="{{ $alt | safeHTMLAttr }}"
         loading="{{ $loading }}"
         >
   {{ if $caption}}
