@@ -12,10 +12,15 @@ const closeAccordion = (accordion) => {
     content.style.maxHeight = null;
 };
 
-// If sticky_header add offset of 80/100 based on device width.
+// If sticky_header add not small screen size, offset of 80/100 based on device width.
 const getScrollOffset = () => {
-    if (window.innerWidth < 1000) {
-        return stickyHeader ? 80 : 0; 
+    // Based on .header.stick media breakpoints.
+    const isSmallCategory = window.innerWidth >= 515 && window.innerHeight <= 615;
+
+    if (isSmallCategory) {
+        return 0;
+    } else if (window.innerWidth < 1000) {
+        return stickyHeader ? 80 : 0;
     } else {
         return stickyHeader ? 100 : 0;
     }
