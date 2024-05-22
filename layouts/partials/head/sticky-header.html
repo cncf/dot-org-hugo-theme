@@ -1,0 +1,15 @@
+{{ if .Site.Params.sticky_header }}
+<style>
+  @media not screen and (min-width: 515px) and (max-height: 615px) {
+    :target {
+      scroll-margin-top: 80px;
+    }
+
+    @media (min-width: 1000px) {
+      :target {
+        scroll-margin-top: 100px;
+      }
+    }
+  }
+</style>
+{{ end }}

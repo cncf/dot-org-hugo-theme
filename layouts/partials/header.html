@@ -7,7 +7,7 @@
 
         {{ with .Site.Params.logo_on_white }}
         <a class="logo-link" href="{{ "/" | absLangURL }}">
-            <img class="logo" width="150" height="40" src="{{ . | absURL }}" alt="{{ $.Site.Title }}">
+            <img class="logo" width="150" height="40" src="{{ . | absURL }}" alt="{{ $.Site.Title | safeHTMLAttr }}">
         </a>
         {{ else }}
         <a class="site-title-link" href="{{ "/" | absLangURL }}">

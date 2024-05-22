@@ -58,7 +58,7 @@
         <div class="footer__logo-social-wrapper">
             {{ with .Site.Params.logo_on_black }}
             <a class="logo-link" href="{{ "/" | absLangURL }}">
-                <img loading="lazy" class="logo" width="150" height="40" src="{{ . | absURL }}" alt="{{ $.Site.Title }}"></a>
+                <img loading="lazy" class="logo" width="150" height="40" src="{{ . | absURL }}" alt="{{ $.Site.Title | safeHTMLAttr }}"></a>
             {{ end }}
 
             {{- partial "footer/social-links.html" . -}}
@@ -89,6 +89,9 @@
 {{ if and (eq .Type "faq") (eq .Kind "section") }}
 {{ $js := resources.Get "js/accordion.js" }}
 <script defer src="{{ $js.Permalink }}"></script>
+<script>
+    var stickyHeader = {{ if .Site.Params.sticky_header }}true{{ else }}false{{ end }};
+  </script>
 {{ end }}
 
 {{/* Theme: Scripts */}}

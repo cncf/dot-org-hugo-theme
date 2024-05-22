@@ -13,7 +13,7 @@
         {{ range $validLinks }}
         <li>
             <a href="{{ .value }}" title="{{ i18n "social_link_title" (dict "SiteTitle" $siteTitle "Network" (humanize .key)) | default (printf "%s on %s" $siteTitle (humanize .key)) }}">
-                <img loading="lazy" width="31" height="31" src="{{ printf "/img/social-icons/%s.svg" .key }}" alt="{{ (humanize .key) }} Icon">
+                <img loading="lazy" width="31" height="31" src="{{ printf "/img/social-icons/%s.svg" .key }}" alt="{{ (humanize .key) | safeHTMLAttr }} icon">
             </a>
         </li>
         {{ end }}
