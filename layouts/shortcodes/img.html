@@ -33,13 +33,13 @@
 {{ if $caption}}
   <figure>
   {{ end }}
-      <img
-        src="{{ $src }}"
-        width="{{ $width }}"
-        height="{{ $height }}"
-        alt="{{ $alt | safeHTMLAttr }}"
-        loading="{{ $loading }}"
-        >
+  <img
+    src="{{ $src }}"
+    width="{{ $width }}"
+    height="{{ $height }}"
+    alt="{{ $alt | safeHTMLAttr }}"
+    loading="{{ $loading }}"
+    >
   {{ if $caption}}
     <figcaption>{{ $caption | markdownify }}</figcaption>
   </figure>
