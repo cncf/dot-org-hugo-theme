@@ -20,14 +20,18 @@
             <ul class="main-menu__wrapper">
                 {{ range . }}
                 <li class="top-menu-item{{ if .HasChildren }} menu-item-has-children{{ end }}">
-                    <a href="{{ if .HasChildren }}#{{ else }}{{ .URL | relLangURL }}{{ end }}" class="menu-link">{{
-                        .Name }}</a>
+                    <a href="{{ if .HasChildren }}#{{ else }}{{ .URL | relLangURL }}{{ end }}" 
+                        class="menu-link{{ if strings.HasPrefix .URL "http" }} external-link{{ end }}">
+                        {{ .Name }}
+                    </a>
                     {{ if .HasChildren }}
                     <div class="sub-menu">
                         <ul class="sub-menu__nav">
                             {{ range .Children }}
                             <li class="menu-item">
-                                <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}
+                                <a href="{{ .URL | relLangURL }}" 
+                                    class="menu-link{{ if strings.HasPrefix .URL "http" }} child-external-link{{ end }}">
+                                    <span class="menu-item__name">{{ .Name }}</span>
                                     {{ if .Post }}
                                     <span class="menu-item__description">{{ .Post }}</span>
                                     {{ end }}
