@@ -138,6 +138,25 @@
             }
             &:hover {
                 color: var(--menu-link-color-hover);
+
+                &.external-link:after, &.child-external-link span.menu-item__name:after {
+                    filter: invert(35%) sepia(54%) saturate(0%) hue-rotate(152deg) brightness(91%) contrast(75%);
+                }
+            }
+        }
+
+        .external-link:after, .child-external-link span.menu-item__name:after {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 10px;
+            width: 10px;
+            margin-left: 6px;
+            margin-bottom: 3px;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='transparent' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 8.778 6.667-6.666M1 1h8v8' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            transition: filter 0.5s ease;
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
             }
         }
 

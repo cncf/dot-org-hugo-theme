@@ -27,8 +27,8 @@ en:
       url: "/example-page/"
       weight: 1
     - identifier: "child-1"
-      name: "Example Child Page"
-      url: "/example-page/"
+      name: "Example External page"
+      url: "https://www.google.com/maps"
       weight: 1
       post: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo."
       parent: "about"
@@ -45,27 +45,9 @@ en:
       post: "Nulla consequat massa quis enim. Donec pede justo."
       parent: "about"
     - identifier: "example"
-      name: "Example"
-      url: "/example-page/"
+      name: "External"
+      url: "https://www.google.com/maps"
       weight: 2
-    - identifier: "example-1"
-      name: "Example Child Page"
-      url: "/example-page/"
-      weight: 1
-      post: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo."
-      parent: "example"
-    - identifier: "example-2"
-      name: "Example Child Page"
-      url: "/example-page/"
-      weight: 2
-      post: "Nulla consequat massa quis enim. Donec pede justo."
-      parent: "example"
-    - identifier: "example-3"
-      name: "Example Child Page"
-      url: "/example-page/"
-      weight: 3
-      post: "Aenean commodo ligula get dolor. Aenean massa. "
-      parent: "example"
     - identifier: "demo-page"
       name: "Demo Page"
       url: "/demo-page/"
