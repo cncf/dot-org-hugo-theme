@@ -4,6 +4,36 @@
 <div id="search"></div>
 <script>
   window.addEventListener("DOMContentLoaded", (event) => {
-    new PagefindUI({ element: "#search", showSubResults: true });
-  });
+    pagefind = new PagefindUI({ element: "#search", showSubResults: true });
+
+    const urlParams = new URLSearchParams(window.location.search);
+		const q = urlParams.get('q');
+		if(q){
+      setTimeout(function(){
+        pagefind.triggerSearch(q);
+			}, 1000);
+		}
+
+		document.querySelector("#search input").addEventListener("input", function() {
+			var inputValue = this.value;
+			var queryStringVar = "q";
+			updateQueryString(queryStringVar, inputValue);
+		});
+	});
+
+	function updateQueryString(key, value) {
+		var baseUrl = window.location.href.split("?")[0];
+		var queryString = window.location.search.slice(1);
+		var urlParams = new URLSearchParams(queryString);
+
+		if (urlParams.has(key)) {
+			urlParams.set(key, value);
+		} else {
+			urlParams.append(key, value);
+		}
+
+		var newUrl = baseUrl + "?" + urlParams.toString();
+		// Update the browser history (optional)
+		history.replaceState(null, '', newUrl);
+	}
 </script>
