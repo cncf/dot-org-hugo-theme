@@ -1,0 +1,17 @@
+
+<div class="cards columns-3">
+{{- $people := .Site.Data.people -}}
+{{- range $person := $people -}}
+    <div class="card">
+        <img src="{{ $person.image }}" alt="{{ $person.name }}">
+        <h2>{{ $person.name }}</h2>
+        <p>{{ $person.title }}</p>
+        <p>{{ $person.twitter }}</p>
+        <p>{{ $person.linkedin }}</p>
+        <p>{{ $person.github }}</p>
+        <p>{{ $person.company }}</p>
+        <p>{{ $person.location }}</p>
+        <p>{{ $person.bio }}</p>
+    </div>
+{{- end -}}
+</div>

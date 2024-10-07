@@ -39,8 +39,8 @@ en:
       post: "Aenean commodo ligula get dolor. Aenean massa."
       parent: "about"
     - identifier: "child-3"
-      name: "Example Child Page"
-      url: "/example-page/"
+      name: "People Map"
+      url: "/people-map/"
       weight: 3
       post: "Nulla consequat massa quis enim. Donec pede justo."
       parent: "about"
