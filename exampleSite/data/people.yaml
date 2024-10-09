@@ -9,7 +9,7 @@ tedison:
   company: General Electric
   location: Menlo Park, New Jersey
   lat: 40.5000
-  long: -74.2670
+  lng: -74.2670
   bio: Thomas Edison was an American inventor and businessman who has been described as America's greatest inventor. He developed many devices in fields such as electric power generation, mass communication, sound recording, and motion pictures. These inventions, which include the phonograph, the motion picture camera, and the long-lasting, practical electric light bulb, have had a widespread impact on the modern industrialized world.
   image: /images/people/tedison.jpg
 bfranklin:
@@ -21,7 +21,7 @@ bfranklin:
   company: The Pennsylvania Gazette
   location: Philadelphia, Pennsylvania
   lat: 39.9526
-  long: -75.1652
+  lng: -75.1652
   bio: Benjamin Franklin was an American polymath and one of the Founding Fathers of the United States. Franklin was a leading writer, printer, political philosopher, politician, Freemason, postmaster, scientist, inventor, humorist, civic activist, statesman, and diplomat. As a scientist, he was a major figure in the American Enlightenment and the history of physics for his discoveries and theories regarding electricity.
   image: /images/people/bfranklin.jpg
 ntesla:
@@ -33,7 +33,7 @@ ntesla:
   company: Tesla Electric Light & Manufacturing
   location: New York City, New York
   lat: 40.7128
-  long: -74.0060
+  lng: -74.0060
   bio: Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist who is best known for his contributions to the design of the modern alternating current electricity supply system. Tesla gained experience in telephony and electrical engineering before emigrating to the United States in 1884 to work for Thomas Edison in New York City.
   image: /images/people/ntesla.jpg
 hford:
@@ -45,7 +45,7 @@ hford:
   company: Ford Motor Company
   location: Dearborn, Michigan
   lat: 42.3223
-  long: -83.1763
+  lng: -83.1763
   bio: Henry Ford was an American industrialist and business magnate, founder of the Ford Motor Company, and chief developer of the assembly line technique of mass production. By creating the first automobile that middle-class Americans could afford, he converted the automobile from an expensive curiosity into an accessible conveyance that would profoundly impact the landscape of the 20th century.
   image: /images/people/hford.webp
 mcurie:
@@ -57,7 +57,7 @@ mcurie:
   company: University of Paris
   location: Paris, France
   lat: 48.8566
-  long: 2.3522
+  lng: 2.3522
   bio: Marie Curie was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity
   image: /images/people/mcurie.jpg
 einstein:
@@ -69,6 +69,6 @@ einstein:
   company: Institute for Advanced Study
   location: Princeton, New Jersey
   lat: 40.3573
-  long: -74.6672
+  lng: -74.6672
   bio: Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science. He is best known to the general public for his mass–energy equivalence formula E = mc2, which has been dubbed "the world's most famous equation".
   image: /images/people/einstein.webp

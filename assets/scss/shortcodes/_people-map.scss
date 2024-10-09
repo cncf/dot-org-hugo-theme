@@ -1,0 +1,45 @@
+#map {
+	height: 500px;
+
+	div {
+		width: unset;
+	}
+
+	.map-button {
+		color: black;
+		font-weight: 800;
+		font-size: 14px;
+		background: none;
+		border: none;
+		box-sizing: border-box;
+		cursor: pointer;
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+		width: unset;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	p.date {
+		font-weight: 600;
+		font-size: 14px;
+	}
+
+	.gm-style-iw-c {
+		border-radius: 5px;
+	}
+
+	.gm-ui-hover-effect {
+		height: 24px !important;
+		width: 27px !important;
+	}
+
+	.gm-ui-hover-effect > span {
+		width: 12px !important;
+		height: 12px !important;
+		margin: 8px !important;
+	}
+}
