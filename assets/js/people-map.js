@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             );
 
-            const popup = '<button data-modal-content-id="modal-' + peopleObj[key]['id'] + '" data-modal-slug="' + peopleObj[key]['slug'] + '" data-modal-prefix-class="person" class="js-modal button-reset map-button modal-' + peopleObj[key]['slug'] + '" aria-haspopup="dialog">' + peopleObj[key]['name'] + '</button>';
+            const popup = '<a href="#' + key + '">' + peopleObj[key]['name'] + '</a>';
             marker.addListener(
                 "click",
                 () => {

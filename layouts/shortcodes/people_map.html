@@ -3,8 +3,8 @@
 
 <div class="cards columns-3">
 {{- $people := .Site.Data.people -}}
-{{- range $person := $people -}}
-    <div class="card">
+{{- range $k, $person := $people -}}
+    <div class="card" id="{{ $k }}">
         <img src="{{ $person.image }}" alt="{{ $person.name }}">
         <h2>{{ $person.name }}</h2>
         <p>{{ $person.title }}</p>

@@ -2,25 +2,14 @@
 	height: 500px;
 
 	div {
-		width: unset;
+		width: max-content;
+		max-width: unset;
 	}
 
-	.map-button {
+	a {
 		color: black;
 		font-weight: 800;
 		font-size: 14px;
-		background: none;
-		border: none;
-		box-sizing: border-box;
-		cursor: pointer;
-		display: block;
-		margin-left: 0;
-		margin-right: 0;
-		padding: 0;
-		width: unset;
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 
 	p.date {
