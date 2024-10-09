@@ -1,9 +1,8 @@
 #map {
 	height: 500px;
 
-	div {
-		width: max-content;
-		max-width: unset;
+	div.gm-style-iw {
+		max-width: fit-content !important;
 	}
 
 	a {
