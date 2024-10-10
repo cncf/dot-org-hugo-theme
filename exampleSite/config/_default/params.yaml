@@ -38,3 +38,6 @@ social_links:
 sticky_header: true
 # Enable search in header UI
 show_search: true
+
+# Google Maps API key for people_map shortcode
+google_maps_api_key: "AIzaSyD5FrFpAN6jniMZTnQbTLkGGDSLH7wl5Wc"
