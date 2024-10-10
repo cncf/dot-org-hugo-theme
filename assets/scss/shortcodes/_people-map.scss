@@ -79,6 +79,7 @@
 	&__company, &__title, &__location {
 		font-size: 16px;
 		line-height: 140%;
+		font-weight: 700;
 		color: var(--gray-800);
 	}
 	&__title {
@@ -99,11 +100,8 @@
 			width: auto;
 			color: var(--black);
 		}
-		&-margin {
-			margin-top: 40px;
-			> *:not(:last-child) {
-				margin-right: 10px;
-			}
+		> *:not(:last-child) {
+			margin-right: 10px;
 		}
 	}
 	&__bio {
