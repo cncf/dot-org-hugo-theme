@@ -3,9 +3,9 @@
 tedison:
   name: Thomas Edison
   title: Inventor
-  twitter: ThomasEdison
-  linkedin: ThomasEdison
-  github: ThomasEdison
+  x: https://x.com/ThomasEdison
+  linkedin: https://www.linkedin.com/in/ThomasEdison
+  github: https://github.com/ThomasEdison
   company: General Electric
   location: Menlo Park, New Jersey
   lat: 40.5000
@@ -15,9 +15,9 @@ tedison:
 bfranklin:
   name: Benjamin Franklin
   title: Inventor
-  twitter: BenjaminFranklin
-  linkedin: BenjaminFranklin
-  github: BenjaminFranklin
+  x: https://x.com/BenjaminFranklin
+  linkedin: https://www.linkedin.com/in/BenjaminFranklin
+  github: https://github.com/BenjaminFranklin
   company: The Pennsylvania Gazette
   location: Philadelphia, Pennsylvania
   lat: 39.9526
@@ -27,9 +27,9 @@ bfranklin:
 ntesla:
   name: Nikola Tesla
   title: Inventor
-  twitter: NikolaTesla
-  linkedin: NikolaTesla
-  github: NikolaTesla
+  x: https://x.com/NikolaTesla
+  linkedin: https://www.linkedin.com/in/NikolaTesla
+  github: https://github.com/NikolaTesla
   company: Tesla Electric Light & Manufacturing
   location: New York City, New York
   lat: 40.7128
@@ -39,21 +39,21 @@ ntesla:
 hford:
   name: Henry Ford
   title: Inventor
-  twitter: HenryFord
-  linkedin: HenryFord
-  github: HenryFord
+  x: https://x.com/HenryFord
+  linkedin: https://www.linkedin.com/in/HenryFord
+  github: https://github.com/HenryFord
   company: Ford Motor Company
   location: Dearborn, Michigan
   lat: 42.3223
   lng: -83.1763
   bio: Henry Ford was an American industrialist and business magnate, founder of the Ford Motor Company, and chief developer of the assembly line technique of mass production. By creating the first automobile that middle-class Americans could afford, he converted the automobile from an expensive curiosity into an accessible conveyance that would profoundly impact the landscape of the 20th century.
-  image: /images/people/hford.webp
+  image: /images/people/hford.jpg
 mcurie:
   name: Marie Curie
   title: Inventor
-  twitter: MarieCurie
-  linkedin: MarieCurie
-  github: MarieCurie
+  x: https://x.com/MarieCurie
+  linkedin: https://www.linkedin.com/in/MarieCurie
+  github: https://github.com/MarieCurie
   company: University of Paris
   location: Paris, France
   lat: 48.8566
@@ -63,12 +63,12 @@ mcurie:
 einstein:
   name: Albert Einstein
   title: Inventor
-  twitter: AlbertEinstein
-  linkedin: AlbertEinstein
-  github: AlbertEinstein
+  x: https://x.com/AlbertEinstein
+  linkedin: https://www.linkedin.com/in/AlbertEinstein
+  github: https://github.com/AlbertEinstein
   company: Institute for Advanced Study
   location: Princeton, New Jersey
   lat: 40.3573
   lng: -74.6672
   bio: Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science. He is best known to the general public for his mass–energy equivalence formula E = mc2, which has been dubbed "the world's most famous equation".
-  image: /images/people/einstein.webp
+  image: /images/people/einstein.jpg

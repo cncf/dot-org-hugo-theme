@@ -4,16 +4,37 @@
 <div class="cards columns-3">
 {{- $people := .Site.Data.people -}}
 {{- range $k, $person := $people -}}
-    <div class="card" id="{{ $k }}">
-        <img src="{{ $person.image }}" alt="{{ $person.name }}">
-        <h2>{{ $person.name }}</h2>
-        <p>{{ $person.title }}</p>
-        <p>{{ $person.twitter }}</p>
-        <p>{{ $person.linkedin }}</p>
-        <p>{{ $person.github }}</p>
-        <p>{{ $person.company }}</p>
-        <p>{{ $person.location }}</p>
-        <p>{{ $person.bio }}</p>
+    <div class="person" id="{{ $k }}">
+        <figure class="person__image">
+            <img loading="lazy" src="{{ $person.image }}" alt="{{ $person.name }}">
+		</figure>
+        <div class="person__padding">
+            <h3 class="person__name">{{ $person.name }}</h3>
+            {{ with $person.title }}<p class="person__title">{{ . }}</p>{{ end }}
+            {{ with $person.company }}<p class="person__company">{{ . }}</p>{{ end }}
+            {{ with $person.location }}<p class="person__location">{{ . }}</p>{{ end}}
+            {{ with $person.bio }}<p class="person__bio">{{ . }}</p>{{ end }}
+
+            <div class="person__social">
+                {{ with $person.linkedin }}
+                    <a href="{{ . }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" viewBox="0 0 512 512" fill="currentColor"><rect width="512" height="512" rx="0"></rect><circle cx="142" cy="138" r="37" fill="#FFF"></circle><path stroke="#FFF" stroke-width="66" d="M244 194v198M142 194v198"></path><path fill="#FFF" d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"></path></svg>
+                    </a>
+                {{ end }}
+                {{ with $person.x }}
+                    <a href="{{ . }}">
+                        <svg viewBox="0 0 512 512" width="512" height="512" xmlns="http://www.w3.org/2000/svg" aria-label="X">
+                            <rect height="512" rx="0" width="512" fill="currentColor"></rect>
+                            <path class="inner-color" stroke="null" d="m292.818 224.446 128.03-145.738h-30.329L279.304 205.224l-88.76-126.516H88.142L222.396 270.04 88.143 422.851h30.328l117.37-133.634 93.758 133.634H432M129.417 101.104h46.593l214.486 300.451h-46.604" fill="#fff"></path></svg>
+                    </a>
+                {{ end }}
+                {{ with $person.github }}
+                    <a href="{{ . }}">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="GitHub"><rect height="512" rx="0" width="512" fill="currentColor"></rect><path class="inner-color" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z" fill="#fff"></path></svg>
+                    </a>
+                {{ end }}
+            </div>
+        </div>
     </div>
 {{- end -}}
 </div>
