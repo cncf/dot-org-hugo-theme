@@ -191,14 +191,22 @@
 
     // Event handlers,
     const handleResize = throttle(() => {
+        const wasMobile = isMobile;
         isMobile = window.innerWidth < desktopBreakpoint;
+
+        if (isMobile !== wasMobile) {
+            hamburger.classList.remove('is-active');
+            mainMenu.classList.remove('is-active');
+            document.body.classList.remove('has-menu-active');
+        }
+
         if (!isMobile) {
             menuSubs.forEach(subMenu => subMenu.style.removeProperty('display'));
         }
         applyHoverIntent();
         applyDropdownListeners();
         resetMenusAndDropdowns();
-        updateHeaderTop(); 
+        updateHeaderTop();
     }, 200);
 
     const handleHamburgerClick = (e) => {
