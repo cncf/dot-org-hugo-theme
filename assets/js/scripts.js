@@ -10,6 +10,7 @@
     const menuSubs = Array.from(document.querySelectorAll('.sub-menu'));
     const menuHeadings = document.querySelectorAll('.menu-item-has-children > a');
     const dropdowns = document.querySelectorAll('.dropdown');
+    const header = document.querySelector('.header .container');
 
     // States.
     let closeMenuTimeout;
@@ -127,6 +128,15 @@
     };
 
     // Menu functions.
+    const updateHeaderTop = () => {
+        if (isMobile) {
+            const distanceFromTop = header.getBoundingClientRect().bottom + window.pageYOffset;
+            mainMenu.style.top = `${distanceFromTop}px`;
+        } else {
+            mainMenu.style.removeProperty('top');
+        }
+    };
+
     const startCloseMenuTimeout = () => {
         closeMenuTimeout = setTimeout(closeMenu, 50);
     };
@@ -181,15 +191,22 @@
 
     // Event handlers,
     const handleResize = throttle(() => {
+        const wasMobile = isMobile;
         isMobile = window.innerWidth < desktopBreakpoint;
+
+        if (isMobile !== wasMobile) {
+            hamburger.classList.remove('is-active');
+            mainMenu.classList.remove('is-active');
+            document.body.classList.remove('has-menu-active');
+        }
+
         if (!isMobile) {
             menuSubs.forEach(subMenu => subMenu.style.removeProperty('display'));
         }
         applyHoverIntent();
         applyDropdownListeners();
-
-        // Reset menus and dropdowns.
         resetMenusAndDropdowns();
+        updateHeaderTop();
     }, 200);
 
     const handleHamburgerClick = (e) => {
@@ -281,17 +298,13 @@
 
     // Initialize.
     document.addEventListener('DOMContentLoaded', () => {
-        // Add event listeners.
         window.addEventListener('resize', handleResize);
         document.addEventListener('keydown', handleEscapeKey);
         hamburger?.addEventListener('click', handleHamburgerClick);
         menuHeadings.forEach(heading => heading.addEventListener('click', handleHeadingClick));
-
-        // Apply hover intent.
         applyHoverIntent();
-
-        // Apply dropdown listeners.
         applyDropdownListeners();
+        updateHeaderTop();
     });
 
 }());
