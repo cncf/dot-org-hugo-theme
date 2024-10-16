@@ -30,7 +30,7 @@ en:
       name: "Example Child Page"
       url: "/example-page/"
       weight: 1
-      post: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo."
+      post: "Nulla consequat massa quis enim. Donec pede justo."
       parent: "about"
     - identifier: "child-2"
       name: "Example Child Page"
@@ -39,44 +39,26 @@ en:
       post: "Aenean commodo ligula get dolor. Aenean massa."
       parent: "about"
     - identifier: "child-3"
-      name: "Example Child Page"
-      url: "/example-page/"
+      name: "Example External page"
+      url: "https://cncf.io?ref=dot-org"
       weight: 3
-      post: "Nulla consequat massa quis enim. Donec pede justo."
-      parent: "about"
-    - identifier: "example"
-      name: "Example"
-      url: "/example-page/"
-      weight: 2
-    - identifier: "example-1"
-      name: "Example Child Page"
-      url: "/example-page/"
-      weight: 1
       post: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo."
-      parent: "example"
-    - identifier: "example-2"
-      name: "Example Child Page"
-      url: "/example-page/"
-      weight: 2
-      post: "Nulla consequat massa quis enim. Donec pede justo."
-      parent: "example"
-    - identifier: "example-3"
-      name: "Example Child Page"
-      url: "/example-page/"
-      weight: 3
-      post: "Aenean commodo ligula get dolor. Aenean massa. "
-      parent: "example"
+      parent: "about"
     - identifier: "demo-page"
       name: "Demo Page"
       url: "/demo-page/"
-      weight: 3
+      weight: 2
     - identifier: "faq"
       name: "FAQs"
       url: "/faq/"
-      weight: 4
+      weight: 3
     - identifier: "blog"
       name: "Blog"
       url: "/blog/"
+      weight: 4
+    - identifier: "example"
+      name: "External"
+      url: "https://cncf.io?ref=dot-org"
       weight: 5
 es:
   languageName: Spanish
