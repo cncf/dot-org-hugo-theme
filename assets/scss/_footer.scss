@@ -127,7 +127,7 @@
                 margin-top: 20px;
                 a {
                     & + a {
-                        border-left: 1px solid white;
+                        border-left: 1px solid var(--white);
                         padding-left: 10px;
                     }
                 }

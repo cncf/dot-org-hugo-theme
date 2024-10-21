@@ -7,8 +7,8 @@
     flex-direction: column;
     gap: 1em;
     padding: 1em;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--black);
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .lite-youtube-fallback:hover::before {
-    border-left-color: #fff;
+    border-left-color: var(--white);
 }
 
 .lite-youtube-fallback:focus {

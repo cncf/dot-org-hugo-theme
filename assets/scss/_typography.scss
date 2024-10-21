@@ -114,9 +114,9 @@ ol + p {
 
 a {
     font-weight: 700;
-    color: var(--primary-600);
+    color: var(--link-color);
     &:hover {
-        color: var(--primary-700);
+        color: var(--link-color-hover);
     }
 }
 

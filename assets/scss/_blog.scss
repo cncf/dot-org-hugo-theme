@@ -20,7 +20,7 @@
         p {
             margin-block-start: 0;
             margin-block-end: 0;
-            color: #000;
+            color: var(--text-color);
             font-family: var(--rounded-font-family);
             font-size: 14px;
             @media (min-width: 600px) {

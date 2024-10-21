@@ -77,7 +77,7 @@
 }
 
 .main-menu {
-    background-color: white;
+    background-color: var(--white);
     padding-left: 12px;
     padding-right: 12px;
     @media (min-width: 372px) {
@@ -139,14 +139,16 @@
             &:hover {
                 color: var(--menu-link-color-hover);
 
-                &.external-link:after, &.child-external-link span.menu-item__name:after {
+                &.external-link:after,
+                &.child-external-link span.menu-item__name:after {
                     filter: invert(35%) sepia(54%) saturate(0%) hue-rotate(152deg) brightness(91%) contrast(75%);
                 }
             }
         }
 
-        .external-link:after, .child-external-link span.menu-item__name:after {
-            content: '';
+        .external-link:after,
+        .child-external-link span.menu-item__name:after {
+            content: "";
             display: inline-block;
             vertical-align: middle;
             height: 10px;

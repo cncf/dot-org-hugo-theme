@@ -16,12 +16,12 @@
     }
     margin-left: -1px;
     line-height: 1.25;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .homepage .page-link,
 .listing .page-link {
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .page-item.disabled .page-link {

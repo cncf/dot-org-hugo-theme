@@ -7,10 +7,10 @@ SCSS-ified, variablified, spin mode default by James Hunt @thetwopct
 */
 
 // Setup variables for the hamburger.
-$hamburger-color: black;
-$hamburger-color-hover: rgb(83, 83, 83);
-$hamburger-active-color: black;
-$hamburger-active-color-hover: rgb(31, 31, 31);
+$hamburger-color: var(--text-color);
+$hamburger-color-hover: var(--gray-800);
+$hamburger-active-color: var(--text-color);
+$hamburger-active-color-hover: var(--text-color);
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 10px;
 $hamburger-layer-width: 26px;
@@ -127,10 +127,14 @@ $hamburger-responsive-hide: $min-desktop;
 
     &::before {
         top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
-        transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+        transition:
+            top 0.1s 0.25s ease-in,
+            opacity 0.1s ease-in;
     }
     &::after {
         bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
-        transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition:
+            bottom 0.1s 0.25s ease-in,
+            transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
 }
