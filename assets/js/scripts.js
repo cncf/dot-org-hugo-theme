@@ -129,8 +129,10 @@
 
     // Menu functions.
     const updateHeaderTop = () => {
+        const headerRect = header.getBoundingClientRect();
+        const isHeaderSticky = headerRect.top === 0 || window.pageYOffset > 0;
+        const distanceFromTop = isHeaderSticky ? headerRect.height : headerRect.bottom + window.pageYOffset;
         if (isMobile) {
-            const distanceFromTop = header.getBoundingClientRect().bottom + window.pageYOffset;
             mainMenu.style.top = `${distanceFromTop}px`;
         } else {
             mainMenu.style.removeProperty('top');
@@ -188,6 +190,10 @@
             dropdown.classList.remove('is-expanded');
         });
     };
+
+    const handleScroll = throttle(() => {
+        updateHeaderTop();
+    }, 200);
 
     // Event handlers,
     const handleResize = throttle(() => {
@@ -299,6 +305,7 @@
     // Initialize.
     document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll); 
         document.addEventListener('keydown', handleEscapeKey);
         hamburger?.addEventListener('click', handleHamburgerClick);
         menuHeadings.forEach(heading => heading.addEventListener('click', handleHeadingClick));
