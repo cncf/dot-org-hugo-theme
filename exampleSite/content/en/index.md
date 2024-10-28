@@ -36,10 +36,11 @@ HTML/CSS/JS written from scratch. No frameworks, no libraries, perfect site spee
 Supports multiple languages out of the box. Aims to comply with WCAG 2.1 standards 🌐 👁️‍🗨️
 {{< /column >}}
 {{< /columns >}}
-
+{{< spacer 20 >}}
 ## Embed videos without comprimising page speed
 
 {{< youtube_enhanced id="b3ta7fOo6Mo" >}}
+{{< spacer 20 >}}
 
 {{< cards count=3 >}}
 {{< card >}}
@@ -61,6 +62,7 @@ The built-in blog functionality comes with reusable author data file, breadcrumb
 {{< button link="/blog" text="Blog" >}}
 {{< /card >}}
 {{< /cards >}}
+{{< spacer 20 >}}
 
 ### Full feature list:
 
