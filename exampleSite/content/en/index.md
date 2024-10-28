@@ -40,6 +40,7 @@ Supports multiple languages out of the box. Aims to comply with WCAG 2.1 standar
 ## Embed videos without comprimising page speed
 
 {{< youtube_enhanced id="b3ta7fOo6Mo" >}}
+
 {{< spacer 20 >}}
 
 {{< cards count=3 >}}
@@ -53,7 +54,7 @@ Dot Org is loaded with shortcodes to make it easy for you to construct pages and
 #### Frequently Asked Qs
 A special Frequently Asked Questions "FAQ" layout loads each post inside an accordion for quick navigation.
 {{< spacer 5 >}}
-{{< button link="/faqs" text="FAQs" >}}
+{{< button link="/faq" text="FAQs" >}}
 {{< /card >}}
 {{< card >}}
 #### Full Blog ready to go
