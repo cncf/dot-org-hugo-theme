@@ -5,7 +5,7 @@ description = "This modern, accesible, performant theme is ideal for powering th
 homepage = "https://dot-org-hugo-theme-demo.netlify.app/"
 demosite = "https://dot-org-hugo-theme-demo.netlify.app/"
 min_version = "0.121.0"
-theme_version = "0.1.5"
+theme_version = "0.1.6"
 
 tags = [
   "accessibility",
@@ -20,6 +20,7 @@ tags = [
   "performance",
   "project",
   "responsive",
+  "search",
   "simple",
   "white",
 ]
