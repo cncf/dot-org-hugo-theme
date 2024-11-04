@@ -23,3 +23,8 @@ privacy:
     privacyEnhanced: true
   vimeo:
     enableDNT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
