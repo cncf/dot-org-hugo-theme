@@ -340,3 +340,8 @@ Check out some themes that are using the Dot-Org theme for Hugo:
 
 - [TODO Group](https://todogroup.org)
 - [DeepCausality](https://deepcausality.com)
+- [ModSecurity](https://modsecurity.org)
+- [Northeast Collegiate Cyber Defense League](https://neccdl.org)
+- [OWASP® CRS](https://coreruleset.org)
+- [Hardware City](https://hardwarecity.org)
+- [k8up](https://k8up.io)
