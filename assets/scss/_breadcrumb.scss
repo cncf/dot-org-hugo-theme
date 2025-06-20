@@ -1,7 +1,9 @@
+@use "variables";
+
 .breadcrumbs {
     margin-block-start: 70px;
     margin-block-end: 0;
-    @media (min-width: $desktop-width) {
+    @media (min-width: variables.$desktop-width) {
         margin-block-start: 100px;
         margin-block-end: 0;
     }
@@ -45,7 +47,7 @@
 .breadcrumbs + .h1 {
     margin-block-start: 20px;
     margin-block-end: 50px;
-    @media (min-width: $desktop-width) {
+    @media (min-width: variables.$desktop-width) {
         margin-block-start: 50px;
         margin-block-end: 80px;
     }

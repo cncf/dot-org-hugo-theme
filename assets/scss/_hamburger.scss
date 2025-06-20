@@ -1,3 +1,5 @@
+@use "variables";
+
 /*
 Hamburger
 Based on Hamburgers by Jonathan Suh @jonsuh
@@ -19,7 +21,7 @@ $hamburger-layer-spacing: 3px;
 $hamburger-hover-opacity: 1;
 $hamburger-active-hover-opacity: 1;
 $hamburger-z-index: 10;
-$hamburger-responsive-hide: $min-desktop;
+$hamburger-responsive-hide: variables.$min-desktop;
 
 .hamburger {
     padding: $hamburger-padding-y $hamburger-padding-x;

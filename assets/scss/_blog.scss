@@ -1,10 +1,12 @@
+@use "variables";
+
 .blog-item {
     margin-bottom: 50px;
     &:first-of-type {
         margin-top: 50px;
     }
 
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         margin-bottom: 80px;
     }
     &__title {

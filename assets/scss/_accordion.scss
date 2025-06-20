@@ -1,3 +1,5 @@
+@use "variables";
+
 .accordions {
     display: flex;
     flex-direction: column;
@@ -22,7 +24,7 @@
 
             line-height: 26px;
             font-size: 20px;
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 font-size: 30px;
                 line-height: 50px;
             }
@@ -34,7 +36,7 @@
             padding-top: 34px;
             padding-bottom: 34px;
             margin-inline-end: 34px;
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 padding-top: 40px;
                 padding-bottom: 40px;
                 margin-inline-end: 40px;
@@ -76,7 +78,7 @@
 
         .accordion__content {
             margin-bottom: 34px;
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 margin-bottom: 40px;
             }
             opacity: 1;

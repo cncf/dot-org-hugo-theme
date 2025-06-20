@@ -1,12 +1,14 @@
+@use "variables";
+
 .footer {
     // Space from content.
     margin-top: 70px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         margin-top: 100px;
     }
     padding-top: 60px;
     padding-bottom: 60px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -26,7 +28,7 @@
     }
 
     &__menu-cta-wrapper {
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             display: flex;
             align-items: flex-start;
             margin-bottom: 100px;
@@ -35,7 +37,7 @@
 
     &__menu {
         display: none;
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             flex-shrink: 0;
             flex-grow: 1;
             display: grid;
@@ -56,18 +58,18 @@
     }
 
     &__cta {
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             flex-grow: 0;
         }
         a {
             width: 100%;
             font-size: 20px;
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 width: max-content;
                 margin: 0;
                 margin-left: 20px;
             }
-            @media (min-width: $desktop-width) {
+            @media (min-width: variables.$desktop-width) {
                 margin-left: 40px;
             }
         }
@@ -82,14 +84,14 @@
 
     .logo-link {
         display: none;
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             display: block;
         }
     }
 
     .social-links {
         margin-top: 20px;
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             margin-top: 0;
         }
         display: flex;
@@ -113,7 +115,7 @@
         font-size: 11px;
         line-height: 150%;
         letter-spacing: 0.2px;
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
@@ -123,7 +125,7 @@
             text-decoration: none;
         }
         &__accessibility-git-wrapper {
-            @media (max-width: $mobile-max) {
+            @media (max-width: variables.$mobile-max) {
                 margin-top: 20px;
                 a {
                     & + a {
@@ -135,7 +137,7 @@
                     margin-right: 10px;
                 }
             }
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
