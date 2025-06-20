@@ -13,12 +13,6 @@
     min-width: min-content;
     max-width: 100%;
     margin-top: 30px;
-    @media (max-width: variables.$mobile-max) {
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    }
-    @media (min-width: variables.$min-desktop) {
-        margin-top: 0;
-    }
     &.is-expanded {
         @media (min-width: variables.$min-desktop) {
             margin-bottom: 0;
@@ -40,12 +34,18 @@
             &::after {
                 // opening menu.
                 transition: transform 0.1s ease-in;
+                transform: rotate(180deg) translateY(-50%);
                 @media (prefers-reduced-motion: reduce) {
                     transition: none;
                 }
-                transform: rotate(180deg) translateY(-50%);
             }
         }
+    }
+    @media (max-width: variables.$mobile-max) {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    @media (min-width: variables.$min-desktop) {
+        margin-top: 0;
     }
 }
 
@@ -63,15 +63,15 @@
     line-height: 40px;
     vertical-align: middle;
     padding-right: 20px; // min space for word and chevron.
+    transition: color 0.5s ease;
+    &:hover {
+        color: var(--menu-link-color-hover);
+    }
     @media (min-width: variables.$min-desktop) {
         padding-right: 10px; // as per other menu items.
     }
-    transition: color 0.5s ease;
     @media (prefers-reduced-motion: reduce) {
         transition: none;
-    }
-    &:hover {
-        color: var(--menu-link-color-hover);
     }
 }
 

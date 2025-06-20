@@ -24,10 +24,6 @@
 
             line-height: 26px;
             font-size: 20px;
-            @media (min-width: variables.$min-desktop) {
-                font-size: 30px;
-                line-height: 50px;
-            }
             text-transform: none;
             color: var(--text-color);
             font-family: var(--rounded-font-family);
@@ -37,6 +33,8 @@
             padding-bottom: 34px;
             margin-inline-end: 34px;
             @media (min-width: variables.$min-desktop) {
+                font-size: 30px;
+                line-height: 50px;
                 padding-top: 40px;
                 padding-bottom: 40px;
                 margin-inline-end: 40px;
@@ -78,10 +76,10 @@
 
         .accordion__content {
             margin-bottom: 34px;
+            opacity: 1;
             @media (min-width: variables.$min-desktop) {
                 margin-bottom: 40px;
             }
-            opacity: 1;
         }
     }
 }

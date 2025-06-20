@@ -3,11 +3,11 @@
 .breadcrumbs {
     margin-block-start: 70px;
     margin-block-end: 0;
+    font-family: var(--rounded-font-family);
     @media (min-width: variables.$desktop-width) {
         margin-block-start: 100px;
         margin-block-end: 0;
     }
-    font-family: var(--rounded-font-family);
 }
 
 .breadcrumbs-list {
@@ -22,9 +22,6 @@
 
 .breadcrumb {
     font-size: 14px;
-    @media (min-width: 600px) {
-        font-size: 16px;
-    }
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
@@ -33,6 +30,9 @@
     a {
         text-decoration: none;
         color: var(--gray-800);
+    }
+    @media (min-width: 600px) {
+        font-size: 16px;
     }
 }
 

@@ -8,13 +8,13 @@
     position: relative;
     &.sticky {
         position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
         // remove sticky on smaller screens.
         @media (min-width: 515px) and (max-height: 615px) {
             position: relative;
         }
-        top: 0;
-        left: 0;
-        right: 0;
     }
     &:after {
         content: "";
@@ -43,7 +43,7 @@
 
     // Reset lists.
     ul {
-        @extend .ul-reset;
+        @extend .ul-reset !optional;
     }
 
     .logo {
@@ -105,24 +105,18 @@
         overflow-y: scroll;
         padding-bottom: 120px;
         transition: top 0.5s ease-in-out;
-        @media (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
         transform-style: preserve-3d;
         // activate the menu.
         &.is-active {
             left: 0;
         }
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
     }
     &__wrapper {
         margin-left: 0; // reset.
         padding-left: 0; // reset.
-        @media (max-width: variables.$mobile-max) {
-            padding-top: 10px;
-        }
-        @media (min-width: variables.$min-desktop) {
-            display: flex;
-        }
         // All Links.
         a {
             display: block;
@@ -180,6 +174,12 @@
                 letter-spacing: 0;
             }
         }
+        @media (max-width: variables.$mobile-max) {
+            padding-top: 10px;
+        }
+        @media (min-width: variables.$min-desktop) {
+            display: flex;
+        }
     }
     &__cta-language-wrapper {
         @media (min-width: variables.$min-desktop) {
@@ -228,11 +228,11 @@
         display: block;
         svg {
             transition: filter 0.5s ease;
-            @media (prefers-reduced-motion: reduce) {
-                transition: none;
-            }
             &:hover {
                 filter: invert(38%) sepia(7%) saturate(283%) hue-rotate(169deg) brightness(99%) contrast(94%);
+            }
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
             }
             @media (min-width: variables.$min-desktop) {
                 margin-left: 30px;
@@ -245,12 +245,6 @@
 
     // Top row only.
     .top-menu-item {
-        @media (min-width: variables.$min-desktop) {
-            margin-right: 20px;
-        }
-        @media (min-width: variables.$desktop-width) {
-            margin-right: 60px;
-        }
         > a {
             padding-top: 25px;
             padding-bottom: 25px;
@@ -266,6 +260,12 @@
             @media (min-width: variables.$min-desktop) {
                 border-bottom: 0;
             }
+        }
+        @media (min-width: variables.$min-desktop) {
+            margin-right: 20px;
+        }
+        @media (min-width: variables.$desktop-width) {
+            margin-right: 60px;
         }
     }
 
@@ -290,9 +290,6 @@
             }
         }
         > a {
-            @media (min-width: variables.$min-desktop) {
-                cursor: default;
-            }
             &::after {
                 display: inline-block;
                 content: "";
@@ -311,6 +308,9 @@
                 @media (min-width: variables.$min-desktop) {
                     margin-left: 10px;
                 }
+            }
+            @media (min-width: variables.$min-desktop) {
+                cursor: default;
             }
         }
         // activate pop-out menu, with is-open class or with focus.

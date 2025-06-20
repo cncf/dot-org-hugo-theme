@@ -4,14 +4,14 @@
 // Set body size.
 body {
     font-size: 0.875em; // 14px.
-    @media (min-width: 500px) {
-        font-size: 1em; // 16px.
-    }
     font-weight: 400;
     color: var(--text-color);
     font-family: var(--rounded-font-family);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @media (min-width: 500px) {
+        font-size: 1em; // 16px.
+    }
 }
 
 .title {
@@ -139,6 +139,11 @@ blockquote {
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-left: 20px;
+    p {
+        font-style: italic;
+        margin-block-start: 10px;
+        margin-block-end: 10px;
+    }
     @media (min-width: variables.$desktop-width) {
         margin-block-start: 50px;
         margin-block-end: 50px;
@@ -148,11 +153,6 @@ blockquote {
         margin-inline-start: 20px;
         margin-inline-end: 20px;
         padding-left: 20px;
-    }
-    p {
-        font-style: italic;
-        margin-block-start: 10px;
-        margin-block-end: 10px;
     }
 }
 
