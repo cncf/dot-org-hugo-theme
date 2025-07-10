@@ -5,13 +5,12 @@
     "targetPath" "css/styles.css"
     "transpiler" "dartsass"
     "vars" site.Params.styles
-    "includePaths" (slice "node_modules/bootstrap/scss")
   }}
   {{ with . | toCSS $opts | postCSS }}
     {{ if hugo.IsDevelopment }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" media="all">
     {{ else }}
-      {{ with . | fingerprint }}
+      {{ with . | fingerprint "sha512"}}
         <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="all">
       {{ end }}
     {{ end }}
