@@ -16,7 +16,7 @@
     }
     // Reset lists.
     ul {
-        @extend .ul-reset;
+        @extend .ul-reset !optional;
         padding-inline-start: 0;
     }
 
@@ -84,9 +84,6 @@
 
     .social-links {
         margin-top: 20px;
-        @media (min-width: variables.$min-desktop) {
-            margin-top: 0;
-        }
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -102,17 +99,15 @@
                 opacity: 0.8;
             }
         }
+        @media (min-width: variables.$min-desktop) {
+            margin-top: 0;
+        }
     }
 
     .copyright {
         font-size: 11px;
         line-height: 150%;
         letter-spacing: 0.2px;
-        @media (min-width: variables.$min-desktop) {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-        }
         a {
             font-weight: 800;
             text-decoration: none;
@@ -140,6 +135,11 @@
         }
         p {
             margin: 0;
+        }
+        @media (min-width: variables.$min-desktop) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
         }
     }
     @media (min-width: variables.$min-desktop) {
