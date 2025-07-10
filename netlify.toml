@@ -5,7 +5,7 @@ command = """\
   tar -xf dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
   rm dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
   export PATH=/opt/build/repo/dart-sass:$PATH && \
-  cd exampleSite && npm install && hugo --environment=production --themesDir=../.. --baseURL ${DEPLOY_PRIME_URL}  && npx -y pagefind --site public"
+  cd exampleSite && npm install && hugo --environment=production --themesDir=../.. --baseURL ${DEPLOY_PRIME_URL}  && npx -y pagefind --site public
   """
 
 [build.environment]
