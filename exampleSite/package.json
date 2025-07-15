@@ -30,6 +30,7 @@
     "postcss-cli": "^11"
   },
   "devDependencies": {
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "sass-embedded": "^1.89.2"
   }
 }
