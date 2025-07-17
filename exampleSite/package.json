@@ -27,10 +27,10 @@
     "hugo-extended": "^0.144.0",
     "netlify-cli": "^16.4.2",
     "postcss": "^8.5.2",
-    "postcss-cli": "^11"
+    "postcss-cli": "^11",
+    "sass-embedded": "^1.89.2"
   },
   "devDependencies": {
-    "prettier": "^3.0.3",
-    "sass-embedded": "^1.89.2"
+    "prettier": "^3.0.3"
   }
 }
