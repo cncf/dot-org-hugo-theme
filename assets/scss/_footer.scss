@@ -1,4 +1,5 @@
 @use "variables";
+@use "global";
 
 .footer {
     // Space from content.
@@ -16,7 +17,7 @@
     }
     // Reset lists.
     ul {
-        @extend .ul-reset !optional;
+        @extend .ul-reset;
         padding-inline-start: 0;
     }
 
