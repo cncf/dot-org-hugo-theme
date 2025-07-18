@@ -5,6 +5,7 @@
   "main": "none.js",
   "scripts": {
     "build": "hugo --theme=dot-org-hugo-theme",
+    "build:production": "hugo --environment=production --themesDir=../.. --baseURL ${npm_config_url}",
     "start": "hugo serve --logLevel info --configDir=config --buildDrafts --buildFuture --ignoreCache --disableFastRender --gc  --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints",
     "dev": "npm run dev:start",
     "dev:start": "hugo serve --logLevel info --configDir=config --themesDir=../.. --buildDrafts --buildFuture --ignoreCache --disableFastRender --gc  --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints",
