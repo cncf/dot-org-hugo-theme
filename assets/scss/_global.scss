@@ -1,3 +1,5 @@
+@use "variables";
+
 body {
 	overscroll-behavior: none; // fixes menu off bottom of screen.
 	height: auto;
@@ -13,7 +15,7 @@ body {
 	margin: auto;
 	width: 100%;
 	max-width: 100%;
-	@media (min-width: $desktop-width) {
+	@media (min-width: variables.$desktop-width) {
 		max-width: var(--container-width);
 	}
 }
@@ -27,7 +29,7 @@ body {
 		padding-right: var(--gutter);
 	}
 
-	@media (min-width: $desktop-width) {
+	@media (min-width: variables.$desktop-width) {
 		padding-left: 0px;
 		padding-right: 0px;
 	}

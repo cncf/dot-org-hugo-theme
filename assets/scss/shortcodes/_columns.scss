@@ -1,3 +1,5 @@
+@use "../variables";
+
 .columns {
     display: grid;
     row-gap: 32px;
@@ -22,7 +24,7 @@
         @media (min-width: 600px) {
             grid-column: span 6;
         }
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             grid-column: span 4;
         }
     }
@@ -34,7 +36,7 @@
         @media (min-width: 600px) {
             grid-column: span 6;
         }
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             grid-column: span 3;
         }
     }

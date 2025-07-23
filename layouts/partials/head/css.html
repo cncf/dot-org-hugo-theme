@@ -1,10 +1,18 @@
-{{- $source := "scss/styles.scss" }}
-{{- $target := "css/styles.css" }}
-{{ $options := (dict "targetPath" $target) }}
-{{ if eq hugo.Environment "production" }}
-    {{ $options = merge $options (dict "outputStyle" "compressed" "enableSourceMap" false) }}
-{{ else }}
-    {{ $options = merge $options (dict "outputStyle" "nested" "enableSourceMap" true) }}
+{{ with resources.Get "scss/styles.scss" }}
+  {{ $opts := dict
+    "enableSourceMap" hugo.IsDevelopment
+    "outputStyle" (cond hugo.IsDevelopment "expanded" "compressed")
+    "targetPath" "css/styles.css"
+    "transpiler" "dartsass"
+    "vars" site.Params.styles
+  }}
+  {{ with . | toCSS $opts | postCSS }}
+    {{ if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" media="all">
+    {{ else }}
+      {{ with . | fingerprint "sha512"}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="all">
+      {{ end }}
+    {{ end }}
+  {{ end }}
 {{ end }}
-{{ $style := resources.Get $source | css.Sass $options | css.PostCSS (dict "config" "postcss.config.js") | resources.Fingerprint "sha512" }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="all">

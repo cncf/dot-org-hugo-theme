@@ -1,21 +1,23 @@
+@use "variables";
+
 // General rules of typography that apply across the whole website.
 // Set body size.
 body {
     font-size: 0.875em; // 14px.
-    @media (min-width: 500px) {
-        font-size: 1em; // 16px.
-    }
     font-weight: 400;
     color: var(--text-color);
     font-family: var(--rounded-font-family);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @media (min-width: 500px) {
+        font-size: 1em; // 16px.
+    }
 }
 
 .title {
     margin-block-start: 70px;
     margin-block-end: 50px;
-    @media (min-width: $desktop-width) {
+    @media (min-width: variables.$desktop-width) {
         margin-block-start: 100px;
         margin-block-end: 80px;
     }
@@ -29,7 +31,7 @@ h1,
     text-transform: uppercase;
     line-height: 112.2%;
     font-size: 44px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         line-height: 115%;
         font-size: 80px;
     }
@@ -45,7 +47,7 @@ h2,
     font-size: 34px;
     margin-block-start: 50px;
     margin-block-end: 30px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         line-height: 115%;
         font-size: 40px;
     }
@@ -59,7 +61,7 @@ h3,
     text-transform: none;
     margin-block-start: 40px;
     margin-block-end: 25px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         font-size: 30px;
     }
 }
@@ -74,7 +76,7 @@ h4,
     letter-spacing: 2.4px;
     margin-block-start: 28px;
     margin-block-end: 18px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         font-size: 18px;
     }
 }
@@ -87,7 +89,7 @@ h5,
     letter-spacing: 0.8px;
     margin-block-start: 25px;
     margin-block-end: 16px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         font-size: 16px;
     }
 }
@@ -101,7 +103,7 @@ h6,
     letter-spacing: 0.8px;
     margin-block-start: 20px;
     margin-block-end: 14px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         font-size: 14px;
     }
 }
@@ -137,20 +139,20 @@ blockquote {
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-left: 20px;
-    @media (min-width: $desktop-width) {
-        margin-block-start: 50px;
-        margin-block-end: 50px;
-    }
-    @media (min-width: $min-desktop) {
-        font-size: 18px;
-        margin-inline-start: 20px;
-        margin-inline-end: 20px;
-        padding-left: 20px;
-    }
     p {
         font-style: italic;
         margin-block-start: 10px;
         margin-block-end: 10px;
+    }
+    @media (min-width: variables.$desktop-width) {
+        margin-block-start: 50px;
+        margin-block-end: 50px;
+    }
+    @media (min-width: variables.$min-desktop) {
+        font-size: 18px;
+        margin-inline-start: 20px;
+        margin-inline-end: 20px;
+        padding-left: 20px;
     }
 }
 

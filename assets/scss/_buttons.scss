@@ -1,3 +1,5 @@
+@use "variables";
+
 // Default button style
 .button {
     display: inline-block;
@@ -40,7 +42,7 @@
 .button {
     margin-top: 30px;
     margin-bottom: 30px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -49,7 +51,7 @@
 .button + .button {
     margin-top: 0;
     margin-bottom: 30px;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         margin-top: 0;
         margin-bottom: 50px;
     }

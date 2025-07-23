@@ -1,3 +1,5 @@
+@use "variables";
+
 .dropdown {
     position: relative;
     border-radius: 6px;
@@ -11,14 +13,8 @@
     min-width: min-content;
     max-width: 100%;
     margin-top: 30px;
-    @media (max-width: $mobile-max) {
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    }
-    @media (min-width: $min-desktop) {
-        margin-top: 0;
-    }
     &.is-expanded {
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             margin-bottom: 0;
             overflow: visible;
             z-index: 30;
@@ -28,7 +24,7 @@
             min-width: min-content;
             top: 100%;
             right: 0;
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 padding-top: 30px;
                 width: 100px;
             }
@@ -38,12 +34,18 @@
             &::after {
                 // opening menu.
                 transition: transform 0.1s ease-in;
+                transform: rotate(180deg) translateY(-50%);
                 @media (prefers-reduced-motion: reduce) {
                     transition: none;
                 }
-                transform: rotate(180deg) translateY(-50%);
             }
         }
+    }
+    @media (max-width: variables.$mobile-max) {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    @media (min-width: variables.$min-desktop) {
+        margin-top: 0;
     }
 }
 
@@ -61,15 +63,15 @@
     line-height: 40px;
     vertical-align: middle;
     padding-right: 20px; // min space for word and chevron.
-    @media (min-width: $min-desktop) {
-        padding-right: 10px; // as per other menu items.
-    }
     transition: color 0.5s ease;
-    @media (prefers-reduced-motion: reduce) {
-        transition: none;
-    }
     &:hover {
         color: var(--menu-link-color-hover);
+    }
+    @media (min-width: variables.$min-desktop) {
+        padding-right: 10px; // as per other menu items.
+    }
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
     }
 }
 
@@ -95,7 +97,7 @@
             transition: none;
         }
     }
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         padding: 0;
     }
 }
@@ -105,7 +107,7 @@
     overflow: hidden;
     transition: height 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
     will-change: height;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         position: absolute;
         width: 100%;
     }
@@ -115,7 +117,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         border: 1px solid var(--gray-200);
         border-radius: 12px;
         background-color: var(--white);
@@ -138,7 +140,7 @@
             &:hover {
                 color: var(--menu-link-color);
             }
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 color: var(--menu-link-color);
                 &:hover {
                     color: var(--menu-link-color-hover);

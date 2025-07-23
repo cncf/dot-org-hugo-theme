@@ -1,3 +1,6 @@
+@use "variables";
+@use "global";
+
 .header {
     width: 100%;
     background: var(--white);
@@ -6,13 +9,13 @@
     position: relative;
     &.sticky {
         position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
         // remove sticky on smaller screens.
         @media (min-width: 515px) and (max-height: 615px) {
             position: relative;
         }
-        top: 0;
-        left: 0;
-        right: 0;
     }
     &:after {
         content: "";
@@ -22,7 +25,7 @@
         height: 20px;
         z-index: 10;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
         }
     }
@@ -34,7 +37,7 @@
         align-items: center;
         align-content: center;
         height: 60px;
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             height: 80px;
         }
     }
@@ -49,7 +52,7 @@
         object-fit: contain;
         max-width: 100px;
         max-height: 40px;
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             max-width: 130px;
             max-height: 50px;
         }
@@ -66,11 +69,11 @@
         font-family: var(--condensed-font-family);
         font-weight: 700;
         font-size: 20px;
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             flex-shrink: 0;
             font-size: 22px;
         }
-        @media (min-width: $desktop-width) {
+        @media (min-width: variables.$desktop-width) {
             font-size: 28px;
         }
     }
@@ -84,7 +87,7 @@
         padding-left: var(--gutter);
         padding-right: var(--gutter);
     }
-    @media (min-width: $min-desktop) {
+    @media (min-width: variables.$min-desktop) {
         display: flex;
         align-items: center;
         width: 100%;
@@ -92,7 +95,7 @@
         padding-right: 0px;
         margin-left: clamp(50px, 5vw, 75px);
     }
-    @media (max-width: $mobile-max) {
+    @media (max-width: variables.$mobile-max) {
         position: fixed;
         left: -100%;
         top: 60px;
@@ -103,24 +106,18 @@
         overflow-y: scroll;
         padding-bottom: 120px;
         transition: top 0.5s ease-in-out;
-        @media (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
         transform-style: preserve-3d;
         // activate the menu.
         &.is-active {
             left: 0;
         }
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
     }
     &__wrapper {
         margin-left: 0; // reset.
         padding-left: 0; // reset.
-        @media (max-width: $mobile-max) {
-            padding-top: 10px;
-        }
-        @media (min-width: $min-desktop) {
-            display: flex;
-        }
         // All Links.
         a {
             display: block;
@@ -178,9 +175,15 @@
                 letter-spacing: 0;
             }
         }
+        @media (max-width: variables.$mobile-max) {
+            padding-top: 10px;
+        }
+        @media (min-width: variables.$min-desktop) {
+            display: flex;
+        }
     }
     &__cta-language-wrapper {
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             margin-left: auto;
             display: flex;
             align-items: center;
@@ -188,7 +191,7 @@
     }
     &__search-language-wrapper {
         display: flex;
-        @media (max-width: $mobile-max) {
+        @media (max-width: variables.$mobile-max) {
             flex-direction: row-reverse;
             align-items: flex-start;
             gap: 40px;
@@ -200,10 +203,10 @@
         width: 100%;
         text-align: center;
         margin-bottom: 0;
-        @media (max-width: $mobile-max) {
+        @media (max-width: variables.$mobile-max) {
             font-size: 18px;
         }
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             width: max-content;
             margin-top: 0; // reset.
             margin-left: 30px;
@@ -212,11 +215,11 @@
 
     // Language Selector.
     .language-selector {
-        @media (max-width: $mobile-max) {
+        @media (max-width: variables.$mobile-max) {
             flex-shrink: 0;
             flex-grow: 1;
         }
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             margin-left: 30px;
         }
     }
@@ -226,16 +229,16 @@
         display: block;
         svg {
             transition: filter 0.5s ease;
-            @media (prefers-reduced-motion: reduce) {
-                transition: none;
-            }
             &:hover {
                 filter: invert(38%) sepia(7%) saturate(283%) hue-rotate(169deg) brightness(99%) contrast(94%);
             }
-            @media (min-width: $min-desktop) {
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
+            @media (min-width: variables.$min-desktop) {
                 margin-left: 30px;
             }
-            @media (max-width: $mobile-max) {
+            @media (max-width: variables.$mobile-max) {
                 margin-top: 30px;
             }
         }
@@ -243,12 +246,6 @@
 
     // Top row only.
     .top-menu-item {
-        @media (min-width: $min-desktop) {
-            margin-right: 20px;
-        }
-        @media (min-width: $desktop-width) {
-            margin-right: 60px;
-        }
         > a {
             padding-top: 25px;
             padding-bottom: 25px;
@@ -261,9 +258,15 @@
             &.is-open {
                 border-width: 4px;
             }
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 border-bottom: 0;
             }
+        }
+        @media (min-width: variables.$min-desktop) {
+            margin-right: 20px;
+        }
+        @media (min-width: variables.$desktop-width) {
+            margin-right: 60px;
         }
     }
 
@@ -282,15 +285,12 @@
                 @media (prefers-reduced-motion: reduce) {
                     transition: none;
                 }
-                @media (min-width: $min-desktop) {
+                @media (min-width: variables.$min-desktop) {
                     margin-top: 3px;
                 }
             }
         }
         > a {
-            @media (min-width: $min-desktop) {
-                cursor: default;
-            }
             &::after {
                 display: inline-block;
                 content: "";
@@ -306,9 +306,12 @@
                 @media (prefers-reduced-motion: reduce) {
                     transition: none;
                 }
-                @media (min-width: $min-desktop) {
+                @media (min-width: variables.$min-desktop) {
                     margin-left: 10px;
                 }
+            }
+            @media (min-width: variables.$min-desktop) {
+                cursor: default;
             }
         }
         // activate pop-out menu, with is-open class or with focus.
@@ -327,7 +330,7 @@
         display: none;
         padding-top: 25px;
         padding-bottom: 25px;
-        @media (min-width: $min-desktop) {
+        @media (min-width: variables.$min-desktop) {
             padding-top: 15px;
             padding-bottom: 0;
             display: block;
@@ -349,7 +352,7 @@
         &__nav {
             margin-left: 0; // reset.
             padding-left: 0; // reset.
-            @media (min-width: $min-desktop) {
+            @media (min-width: variables.$min-desktop) {
                 background-color: var(--white);
                 border-radius: 12px;
                 border: 1px solid var(--gray-200);
