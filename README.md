@@ -48,7 +48,7 @@ To update your theme to future versions:
 git submodule update --remote --merge
 ```
 
-## Installing dependencies 
+## Installing dependencies
 
 Copy (at least) the following files from the themes exampleSite to the root folder of your project.
 
@@ -123,7 +123,7 @@ npx -y pagefind --site public
 
 Every time your content is updated, you need to update the search index by again running `npx -y pagefind --site public`, so this should be part of your deployment process.
 
-## Custom shortcodes 
+## Custom shortcodes
 
 You can use our custom shortcodes to quickly style your website in markdown. Due to the way Hugo deals with nested content, particularly nested shortcodes, you may find that shortcodes that are children of other shortcodes do not render as they should. If this happens to your site, this can often be resolved by allowing Hugo to [render "unsafe" HTML](https://gohugo.io/getting-started/configuration-markup/#goldmark). Add the following to your config YAML file:
 
@@ -136,7 +136,7 @@ markup:
 
 ### Button
 
-There is a button ready to be inserted in to markdown files:
+There is a button ready to be inserted into markdown files:
 
 ```md
 {{< button link="/path/to/page" text="Default Button" >}}
@@ -228,10 +228,10 @@ Inserts an image in a more advanced format than standard Hugo syntax.
 {{< img src="/img/blog/image-name.png" >}}
 ```
 
-Options: 
+Options:
 - src # (required) the image link
 - alt # (optional) describing the image, defaults to filename
-- width # (optional) recommended 
+- width # (optional) recommended
 - height # (optional) recommended
 - caption # (optional) markdown is accepted
 - loading # (optional) defaults to lazy, use eager above the fold
@@ -289,7 +289,7 @@ A spacer is useful for spacing out content on your page. By default our spacer i
 
 ### Table of Contents (TOC)
 
-Insert a Table of Contents automatically in to your page. Picks up on all H2 elements on the page.
+Insert a Table of Contents automatically into your page. Picks up on all H2 elements on the page.
 
 ```
 {{< toc >}}
@@ -319,7 +319,7 @@ Options:
 
 ## Setting up a local instance for improving this theme
 
-If you want to create improvements for this theme for everyone, follow these instructions to launch the exampleSite. 
+If you want to create improvements for this theme for everyone, follow these instructions to launch the exampleSite.
 
 ```bash
 git clone https://github.com/cncf/dot-org-hugo-theme.git
@@ -345,3 +345,5 @@ Check out some themes that are using the Dot-Org theme for Hugo:
 - [OWASP® CRS](https://coreruleset.org)
 - [Hardware City](https://hardwarecity.org)
 - [k8up](https://k8up.io)
+- [FodyDev](https://www.fodydev.org)
+- [Millennium IT](https://millenniumit.net)
