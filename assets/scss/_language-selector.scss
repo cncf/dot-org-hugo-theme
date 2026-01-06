@@ -63,7 +63,7 @@
     line-height: 40px;
     vertical-align: middle;
     padding-right: 20px; // min space for word and chevron.
-    transition: color 0.5s ease;
+    transition: color var(--menu-color-transition-time) ease;
     &:hover {
         color: var(--menu-link-color-hover);
     }
