@@ -93,7 +93,6 @@
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
-        margin-left: clamp(50px, 5vw, 75px);
     }
     @media (max-width: variables.$mobile-max) {
         position: fixed;
@@ -115,9 +114,15 @@
             transition: none;
         }
     }
+    &__wrapper_spacer {
+        margin-left: clamp(50px, 5vw, 75px);
+    }
     &__wrapper {
         margin-left: 0; // reset.
         padding-left: 0; // reset.
+        flex-grow: 1;
+        justify-content: var(--menu-justify-content);
+
         // All Links.
         a {
             display: block;
@@ -209,7 +214,6 @@
         @media (min-width: variables.$min-desktop) {
             width: max-content;
             margin-top: 0; // reset.
-            margin-left: 30px;
         }
     }
 
@@ -262,6 +266,8 @@
                 border-bottom: 0;
             }
         }
+    }
+    .top-menu-item:not(:last-child) {
         @media (min-width: variables.$min-desktop) {
             margin-right: 20px;
         }
