@@ -3,7 +3,7 @@
 .dropdown {
     position: relative;
     border-radius: 6px;
-    background: var(--white);
+    background-color: var(--menu-background-color);
     font-weight: 700;
     line-height: normal;
     font-size: 16px;
@@ -51,7 +51,6 @@
 
 .dropdown-current {
     position: relative;
-    background: var(--white);
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -120,7 +119,7 @@
     @media (min-width: variables.$min-desktop) {
         border: 1px solid var(--gray-200);
         border-radius: 12px;
-        background-color: var(--white);
+        background-color: var(--submenu-background-color);
     }
 }
 

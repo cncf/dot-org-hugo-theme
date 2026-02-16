@@ -3,7 +3,7 @@
 
 .header {
     width: 100%;
-    background: var(--white);
+    background-color: var(--menu-background-color);
     z-index: 20;
 
     position: relative;
@@ -80,7 +80,7 @@
 }
 
 .main-menu {
-    background-color: var(--white);
+    background-color: var(--menu-background-color);
     padding-left: 12px;
     padding-right: 12px;
     @media (min-width: 372px) {
@@ -353,7 +353,7 @@
             margin-left: 0; // reset.
             padding-left: 0; // reset.
             @media (min-width: variables.$min-desktop) {
-                background-color: var(--white);
+                background-color: var(--submenu-background-color);
                 border-radius: 12px;
                 border: 1px solid var(--gray-200);
                 box-shadow:

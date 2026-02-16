@@ -1,6 +1,7 @@
 @use "variables";
 
 body {
+    background-color: var(--page-background-color);
 	overscroll-behavior: none; // fixes menu off bottom of screen.
 	height: auto;
 	max-width: 100%;
@@ -18,6 +19,10 @@ body {
 	@media (min-width: variables.$desktop-width) {
 		max-width: var(--container-width);
 	}
+}
+
+.page {
+    background-color: var(--page-background-color);
 }
 
 .wrap {
