@@ -1,1 +1,13 @@
-<a href="{{ .Get "link" }}" class="{{ with .Get "style" }}{{ if eq . "secondary" }}button secondary{{ else if eq . "tertiary" }}button tertiary{{ else }}button{{ end }}{{ else }}button{{ end }}">{{ .Get "text" }}</a>
+{{- $link := .Get "link" -}}
+{{- $text := .Get "text" -}}
+{{- $style := .Get "style" -}}
+{{- $target := .Get "target" | default "" -}}
+
+{{/* A link opened in a new browsing context gets rel="noopener noreferrer" so the
+     opened page can neither reach back through window.opener nor read the referrer. */}}
+{{- $rel := "" -}}
+{{- if eq $target "_blank" -}}
+  {{- $rel = "noopener noreferrer" -}}
+{{- end -}}
+
+<a href="{{ $link }}" class="{{ with $style }}{{ if eq . "secondary" }}button secondary{{ else if eq . "tertiary" }}button tertiary{{ else }}button{{ end }}{{ else }}button{{ end }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>{{ $text }}</a>

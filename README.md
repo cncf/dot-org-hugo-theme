@@ -147,11 +147,16 @@ There is a button ready to be inserted into markdown files:
 ```md
 {{< button link="/path/to/page" style="tertiary" text="Tertiary Button" >}}
 ```
+```md
+{{< button link="https://example.com" text="External Button" target="_blank" >}}
+```
 
 Options:
 - link # (required) the button link
 - text # (required) the button text
 - style # (optional) secondary, tertiary
+- target # (optional) the link target, e.g. _blank to open the link in a new tab.
+  With target="_blank" the button also gets rel="noopener noreferrer".
 
 ### Cards
 
