@@ -272,6 +272,12 @@ You can embed iFrame content simply using our shortcode:
 
 {{< iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT6TcnSJki1RdzzDTbLCKDl96POVoW4bNZH--0lsJXNrPRRjPC83o2DGKuhZj38qjALnZJPLa0yhMW5/embed?start=false&loop=true&delayms=5000" >}}
 
+## Recent Posts
+
+Show the latest blog posts using our shortcode:
+
+{{< recent_posts count=3 >}}
+
 ## Footnotes
 
 Footnote 1 link[^first].
