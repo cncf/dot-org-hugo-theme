@@ -1,0 +1,12 @@
+{{/* Lists the newest blog posts of the current language, using the same
+     markup as layouts/blog/list.html so the .blog-item styles apply.
+     Usage: {{< recent_posts count=5 >}}
+*/}}
+{{- $count := .Get "count" | default 5 | int -}}
+{{- range first $count (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+  <article class="blog-item">
+    <h2 class="blog-item__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{- partial "blog/byline.html" . }}
+    <p class="blog-item__summary">{{ .Summary | plainify }}</p>
+  </article>
+{{- end }}

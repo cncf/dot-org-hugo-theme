@@ -259,6 +259,20 @@ Sometimes markdown can bunch paragraphs together. You can force a line return us
 {{< br >}}
 ```
 
+### Recent Posts
+
+Lists the newest posts from the `blog` section in the current language, styled like the blog list page (title, byline and summary).
+
+```
+{{< recent_posts >}}
+```
+```
+{{< recent_posts count=3 >}}
+```
+
+Options:
+- count # (optional) number of posts to show. Default: 5.
+
 ### Responsive Table
 
 Wrap your large tables with this shortcode so they overflow on mobile:
