@@ -267,11 +267,12 @@ Lists the newest posts from the `blog` section in the current language, styled l
 {{< recent_posts >}}
 ```
 ```
-{{< recent_posts count=3 >}}
+{{< recent_posts count=3 heading=3 >}}
 ```
 
 Options:
 - count # (optional) number of posts to show. Default: 5.
+- heading # (optional) heading level (1-6) used for the post titles. Set it one level below the surrounding section heading to keep a correct document outline, e.g. `heading=3` when the shortcode sits under a `##` heading. Default: 2.
 
 ### Responsive Table
 

@@ -276,7 +276,7 @@ You can embed iFrame content simply using our shortcode:
 
 Show the latest blog posts using our shortcode:
 
-{{< recent_posts count=3 >}}
+{{< recent_posts count=3 heading=3 >}}
 
 ## Footnotes
 
