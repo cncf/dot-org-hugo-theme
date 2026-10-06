@@ -1,0 +1,19 @@
+{{/* Lists the newest blog posts of the current language, using the same
+     markup as layouts/blog/list.html so the .blog-item styles apply.
+     Usage: {{< recent_posts count=5 heading=3 >}}
+     heading sets the post title level (1-6) so it fits the surrounding
+     document outline; defaults to 2.
+*/}}
+{{- $count := .Get "count" | default 5 | int -}}
+{{- $level := .Get "heading" | default 2 | int -}}
+{{- if or (lt $level 1) (gt $level 6) -}}
+  {{- errorf "recent_posts: heading must be between 1 and 6, got %d. %s" $level .Position -}}
+{{- end -}}
+{{- $tag := printf "h%d" $level -}}
+{{- range first $count (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+  <article class="blog-item">
+    {{ printf "<%s class=\"blog-item__title\">" $tag | safeHTML }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ printf "</%s>" $tag | safeHTML }}
+    {{- partial "blog/byline.html" . }}
+    <p class="blog-item__summary">{{ .Summary | plainify }}</p>
+  </article>
+{{- end }}
